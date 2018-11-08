@@ -1,0 +1,15 @@
+Index: lib/TabBar/My_TabBarView.dart
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- lib/TabBar/My_TabBarView.dart	(date 1539698298000)
++++ lib/TabBar/My_TabBarView.dart	(date 1539698387000)
+@@ -46,6 +46,7 @@
+             ],
+           ),
+ 
++          //---
+         ),
+ 
+ 

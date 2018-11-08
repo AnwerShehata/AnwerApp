@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "63001552672",
+    "firebase_url": "https://fluutteranwerone.firebaseio.com",
+    "project_id": "fluutteranwerone",
+    "storage_bucket": "fluutteranwerone.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:63001552672:android:4f7e4bdcfcec9e3c",
+        "android_client_info": {
+          "package_name": "com.example.anwerapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "63001552672-cr98a5u19pl7qb2vg2trftctp8qubulc.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.anwerapp",
+            "certificate_hash": "b5591a44cd74182d0a27ae808276b00060aa5fe0"
+          }
+        },
+        {
+          "client_id": "63001552672-ol5t79h8f7cqehaotaqtvvh0vc2tgqfh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBlFnLaOHd4Ym3WvDOe0wY7ZuDueC56LRk"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "63001552672-ol5t79h8f7cqehaotaqtvvh0vc2tgqfh.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
