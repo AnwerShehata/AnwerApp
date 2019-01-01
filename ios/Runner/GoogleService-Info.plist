@@ -7,21 +7,21 @@
 	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
 	<string>ca-app-pub-3940256099942544/4411468910</string>
 	<key>CLIENT_ID</key>
-	<string>63001552672-dng215ru20jpoifgsfvgu9ctv0ssop26.apps.googleusercontent.com</string>
+	<string>743865669870-2pm5612vo2pgqvceq86l32lp9h661qmn.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.63001552672-dng215ru20jpoifgsfvgu9ctv0ssop26</string>
+	<string>com.googleusercontent.apps.743865669870-2pm5612vo2pgqvceq86l32lp9h661qmn</string>
 	<key>API_KEY</key>
-	<string>AIzaSyDlkeoQE89Nb6hFS4Cw8E2ED6xgl5KxvJ0</string>
+	<string>AIzaSyAK5fUtV5qXPLiR86BHrUmOdpVEPm8IQak</string>
 	<key>GCM_SENDER_ID</key>
-	<string>63001552672</string>
+	<string>743865669870</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
 	<string>com.example.anwerapp</string>
 	<key>PROJECT_ID</key>
-	<string>fluutteranwerone</string>
+	<string>nwerapp</string>
 	<key>STORAGE_BUCKET</key>
-	<string>fluutteranwerone.appspot.com</string>
+	<string>nwerapp.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
 	<true></true>
 	<key>IS_ANALYTICS_ENABLED</key>
@@ -33,8 +33,8 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:63001552672:ios:4f7e4bdcfcec9e3c</string>
+	<string>1:743865669870:ios:4f7e4bdcfcec9e3c</string>
 	<key>DATABASE_URL</key>
-	<string>https://fluutteranwerone.firebaseio.com</string>
+	<string>https://nwerapp.firebaseio.com</string>
 </dict>
 </plist>

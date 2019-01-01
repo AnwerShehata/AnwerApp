@@ -2,8 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:anwerapp/Firebase/My_GoogleSignin.dart';
 import 'package:anwerapp/Firebase/My_TestFirebase.dart';
 import 'package:anwerapp/Firebase/My_DatabaseRealtime.dart';
-import 'package:anwerapp/Firebase/My_WallpaperApp.dart';
-
 class My_ListFirebase extends StatefulWidget {
 
   final String nameAppBar;
@@ -56,15 +54,6 @@ class _BirdState extends State<My_ListFirebase> {
               title: new Text(" Database Realtime  "),
               subtitle: new Text(" اضافة وخذف وتعديل البيانات "),
               onTap: (){Navigator.push(context, MaterialPageRoute(builder: (context) => My_DatabaseRealtime()),);},
-            ),
-            new Divider(),
-
-
-            //=======Floating Action Button ===============
-            new ListTile(
-              title: new Text(" Wallpaper App  "),
-              subtitle: new Text(" تطبيق عرض الصور من Firebase "),
-              onTap: (){Navigator.push(context, MaterialPageRoute(builder: (context) => My_WallpaperApp()),);},
             ),
             new Divider(),
 
