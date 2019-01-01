@@ -11,6 +11,7 @@
       }
 
       final studentReference =FirebaseDatabase.instance.reference().child("student");
+      final scaffoldKey = new GlobalKey<ScaffoldState>();
 
 
       class _BirdState extends State<My_StudentScreen> {
@@ -31,12 +32,49 @@
             _descriptionController  =  new TextEditingController(text:  widget.student.description);
           }
 
+          void _onPressedFlatButton(){
+            // اذا كانت البيانات ممتلئة نفذ هذا الكود
+            if(widget.student.id != null){
+              studentReference.child(widget.student.id).set({
+                'name' : _nameController.text,
+                'age' : _ageController.text,
+                'city' : _cityController.text,
+                'department' : _departmentController.text,
+                'description' : _descriptionController.text
+              }).then((_){Navigator.pop(context,true);});
+              // هنا في حالة else سوف نستخدم if اخري بداخلها
+            }else{
+              // هنا نقول اذا كانت البيانات فارغة سوف تظهر لك الرسالة التالية ولا يتم رفع البيانات
+              if(
+              _nameController.text.trim().isEmpty ||
+                  _cityController.text.trim().isEmpty  ||
+                  _ageController.text.trim().isEmpty ||
+                  _departmentController.text.trim().isEmpty ||
+                  _descriptionController.text.trim().isEmpty
+              ){
+                my_showSnackBar("عزيزي الطالب يجب اكمال جميع البينات ", scaffoldKey);
+                return ;
+              }else{
+                // وهنا نقول اذا تم ملء جميع البيانات قم برفعها
+                studentReference.push().set({
+                  'name' : _nameController.text,
+                  'age' : _ageController.text,
+                  'city' : _cityController.text,
+                  'department' : _departmentController.text,
+                  'description' : _descriptionController.text
+                }).then((_){Navigator.pop(context,true);});
+              }
+            }
+
+          }
+
       @override
       Widget build(BuildContext context) {
       return new MaterialApp(
         theme: new ThemeData(fontFamily: "Cairo"),
         debugShowCheckedModeBanner: false,
       home:  new Scaffold(
+        key: scaffoldKey,
 
         //-----------AppBar----------------------------------------
         appBar: new AppBar(
@@ -57,25 +95,10 @@
 
 
 
-            FlatButton(onPressed: (){
-              if(widget.student.id != null){
-                studentReference.child(widget.student.id).set({
-                  'name' : _nameController.text,
-                  'age' : _ageController.text,
-                  'city' : _cityController.text,
-                  'department' : _departmentController.text,
-                  'description' : _descriptionController.text
-                }).then((_){Navigator.pop(context,true);});
-              }else{
-                studentReference.push().set({
-                  'name' : _nameController.text,
-                  'age' : _ageController.text,
-                  'city' : _cityController.text,
-                  'department' : _departmentController.text,
-                  'description' : _descriptionController.text
-                }).then((_){Navigator.pop(context,true);});
-              }
-            },
+            //===== هذا كود زد الاضافة والتعديل FlatButton  ==============
+            FlatButton(onPressed: (){_onPressedFlatButton();},
+              // اذا كانت البيانات فارغة سوف يظهر Add
+              //اما اذا الكانت البيانات ممتلئة سوف يظهر Update
               child: (widget.student.id == null) ? Text('Add') : Text('Update'),
             )
           ],

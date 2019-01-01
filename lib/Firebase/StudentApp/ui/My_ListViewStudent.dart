@@ -89,7 +89,9 @@
                                   Expanded(child: new IconButton(icon: Icon(Icons.edit , color: Colors.blue,),
                                       onPressed: ()=> _navigateToStudent(context, itmes[position] ))),
                                   Expanded(child: new IconButton(icon: Icon(Icons.delete , color: Colors.red,),
-                                      onPressed: ()=> _deleteStudent(context, itmes[position],position))),
+                                      // _simpleDialog هنا عند الضغط علي زر الحذف سوف يستدعاء دالة عرض الرسالة
+                                      onPressed: ()=> _simpleDialog(context,itmes[position],position))),
+//                                      onPressed: ()=> _deleteStudent(context, itmes[position],position))),
                                 ],),))],),),),
                   Divider(),
                 ],
@@ -122,6 +124,7 @@
         void _deleteStudent(BuildContext context, Student student,int position)async{
           await studentReference.child(student.id).remove().then((_){
             setState(() {
+              Navigator.pop(context,true);
               itmes.removeAt(position);
             });
           });
@@ -136,6 +139,37 @@
         void _createNewUser(BuildContext  context)async{
         await Navigator.push(context, MaterialPageRoute(builder: (context) => My_StudentScreen(Student(null, '', '', '', '', ''))));
       }
+
+      //======= _simpleDialog ===========================
+        void _simpleDialog(BuildContext context, Student student,int position) async {
+          switch (await showDialog(context: context,
+              builder: (BuildContext context)
+              {
+                return new SimpleDialog(
+                  title: const Text('هل تريد حذف هذا الطالب'),
+                  children: <Widget>[
+
+                    //هنا اذا تم الضغط علي نعم سوف يتم استدعاء دالة حذف العنصر
+                    new SimpleDialogOption(
+                      onPressed: (){_deleteStudent(context, student, position);},
+                      child:  const Text("نعم "),
+                    ) ,
+
+                    //هنا اذا تم الضغط علي زر لا سوف يتم العود بدون فعل اي شي
+                    new SimpleDialogOption(
+                      onPressed: ()=> Navigator.pop(context) ,
+                      child: new Text("لا"),
+                    ),
+
+
+                  ],
+                );
+              }
+          ))
+          {
+            default:
+          }
+        }
 
 
       }

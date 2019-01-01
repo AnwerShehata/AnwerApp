@@ -167,7 +167,7 @@ class _BirdState extends State<My_NotificationAlertDialog> {
             children: <Widget>[
 
               new SimpleDialogOption(
-                onPressed: ()=> Navigator.pop(context,ChangeName("Yes")),
+                onPressed: ()=> Navigator.pop(context,ChangeName("Anwer")),
                 child:  const Text("نعم "),
               ) ,
 
