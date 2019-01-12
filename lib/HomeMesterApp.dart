@@ -42,6 +42,7 @@ class _BirdState extends State<HomeMesterApp> {
 
         //-------- Body -------------------------------------------------
         body: ListView(
+          physics: BouncingScrollPhysics(    ),
           children: <Widget>[
           Container(
             padding: EdgeInsets.fromLTRB(60.0, 10.0, 20.0, 10.0),
@@ -65,7 +66,7 @@ class _BirdState extends State<HomeMesterApp> {
                 ),
 
                 _buildStackSections(context , title: _NameAnimation , description: "امثلة تطبيقة علي تحريك الانيميشن" , myIcon: Icons.settings ,
-                  onTap: (){Navigator.push(context, MaterialPageRoute(builder: (context)=> My_ListFirebase()));}
+//                  onTap: (){Navigator.push(context, MaterialPageRoute(builder: (context)=> My_ListFirebase()));}
                 ),
 
                 _buildStackSections(context , title: _NameApplication , description: "تطبيقات كاملة" , myIcon: Icons.settings ,

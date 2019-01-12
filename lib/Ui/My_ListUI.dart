@@ -10,6 +10,10 @@ import 'package:anwerapp/Ui/My_Ui.dart';
 import 'package:anwerapp/Ui/My_UiCards.dart';
 import 'package:anwerapp/Ui/My_SlideShowImages.dart';
 import 'package:anwerapp/Ui/My_Orderpage.dart';
+import '../Ui/FurnitureApp.dart';
+import './My_FoodRecipes.dart';
+import './My_CakesCatalog.dart';
+import './My_loginpage.dart';
 
 
 class My_ListUI extends StatefulWidget {
@@ -51,127 +55,97 @@ class _BirdState extends State<My_ListUI> {
         appBar: new AppBar(
           elevation: 0.0,
           centerTitle: true,
-          title: new Text("${widget.nameAppBar}"),
+          title: new Text(" Flutter Ui"),
+          leading: IconButton(icon: Icon(Icons.arrow_back_ios), onPressed: (){Navigator.pop(context);}),
         ),
 
         body: ListView(
+          physics: BouncingScrollPhysics(),
           controller:_controllerList ,
           children: <Widget>[
 
 
             //=== Order page ===============
-            new ListTile(
-              title: new Text("Ui Order page"),
-              subtitle: new Text("Ui Order page"),
-              onTap: (){Navigator.push(context, MaterialPageRoute(builder: (context)=> My_Orderpage()),);},
-            ),
-            new Divider(),
+
+            _ItemListView( onTap: (){ Navigator.push(context, MaterialPageRoute(builder: (context) => My_Orderpage()));} ,
+                title: "Ui Order page" , subtitle: " Ui Order page" ),
 
 
             //=======ListView Builder ===============
-            new ListTile(
-              title: new Text(" Dash "),
-              subtitle: new Text("Dash "),
-              onTap: (){Navigator.push(context, MaterialPageRoute(builder: (context)=>My_Dash()),);},
-            ),
-            new Divider(),
+            _ItemListView( onTap: (){ Navigator.push(context, MaterialPageRoute(builder: (context) => My_Dash()));} ,
+                title: "Dash " , subtitle: " Dash " ),
 
 
             //=======ListView Builder ===============
-            new ListTile(
-              title: new Text(" Finance Mobile "),
-              subtitle: new Text("Finance Mobile  "),
-              onTap: (){Navigator.push(context, MaterialPageRoute(builder: (context)=>My_FinanceMobile()),);},
-            ),
-            new Divider(),
+            _ItemListView( onTap: (){ Navigator.push(context, MaterialPageRoute(builder: (context) => My_FinanceMobile()));} ,
+                title: "Finance Mobile " , subtitle: " Finance Mobile " ),
 
 
             //=======ListView Builder ===============
-            new ListTile(
-              title: new Text(" Profile Screen"),
-              subtitle: new Text(" صفحة البروفايل الخاصة بالمستخدمة "),
-              onTap: (){Navigator.push(context, MaterialPageRoute(builder: (context)=>My_ProfileScreen()),);},
-            ),
-            new Divider(),
-
-            //=======ListView Builder ===============
-            new ListTile(
-              title: new Text(" Ui Cards "),
-              subtitle: new Text("Ui Cards "),
-              onTap: (){Navigator.push(context, MaterialPageRoute(builder: (context)=>My_UiCards()),);},
-            ),
-            new Divider(),
+            _ItemListView( onTap: (){ Navigator.push(context, MaterialPageRoute(builder: (context) => My_ProfileScreen()));} ,
+                title: "Profile Screen " , subtitle: " صفحة البروفايل الخاصة بالمستخدمة " ),
 
 
             //=======ListView Builder ===============
-            new ListTile(
-              title: new Text("designLogin"),
-              subtitle: new Text("designLogin"),
-              onTap: (){Navigator.push(context, MaterialPageRoute(builder: (context)=>My_designLogin()),);},
-            ),
-            new Divider(),
-
+            _ItemListView( onTap: (){ Navigator.push(context, MaterialPageRoute(builder: (context) => My_UiCards()));} ,
+                title: "Ui Cards " , subtitle: "Ui Cards " ),
 
 
             //=======ListView Builder ===============
-            new ListTile(
-              title: new Text("Minimal Travel Diary"),
-              subtitle: new Text("Minimal Travel Diary"),
-              onTap: (){Navigator.push(context, MaterialPageRoute(builder: (context)=>My_MinimalTravelDiary()),);},
-            ),
-            new Divider(),
+            _ItemListView( onTap: (){ Navigator.push(context, MaterialPageRoute(builder: (context) => My_designLogin()));} ,
+                title: "designLogin" , subtitle: "designLogin " ),
 
 
             //=======ListView Builder ===============
-            new ListTile(
-              title: new Text("My_StackLayout"),
-              subtitle: new Text("My_StackLayout"),
-              onTap: (){Navigator.push(context, MaterialPageRoute(builder: (context)=>My_StackLayout()),);},
-            ),
-            new Divider(),
-
+            _ItemListView( onTap: (){ Navigator.push(context, MaterialPageRoute(builder: (context) => My_MinimalTravelDiary()));} ,
+                title: "Minimal Travel Diary" , subtitle: "Minimal Travel Diary " ),
 
 
             //=======ListView Builder ===============
-            new ListTile(
-              title: new Text(" My_Ui "),
-              subtitle: new Text(" My_Ui "),
-              onTap: (){Navigator.push(context, MaterialPageRoute(builder: (context)=>My_Ui()),);},
-            ),
-            new Divider(),
+            _ItemListView( onTap: (){ Navigator.push(context, MaterialPageRoute(builder: (context) => My_StackLayout()));} ,
+                title: "My_StackLayout" , subtitle: "My_StackLayout" ),
 
 
             //=======ListView Builder ===============
-            new ListTile(
-              title: new Text(" My_UiCards "),
-              subtitle: new Text(" My_UiCards"),
-              onTap: (){Navigator.push(context, MaterialPageRoute(builder: (context)=>My_UiCards()),);},
-            ),
-            new Divider(),
+            _ItemListView( onTap: (){ Navigator.push(context, MaterialPageRoute(builder: (context) => My_Ui()));} ,
+                title: "My_Ui" , subtitle: "My_Ui" ),
 
 
             //=======ListView Builder ===============
-            new ListTile(
-              title: new Text(" My_UiCards "),
-              subtitle: new Text(" My_UiCards"),
-              onTap: (){Navigator.push(context, MaterialPageRoute(builder: (context)=>My_TalentHire()),);},
-            ),
-            new Divider(),
+            _ItemListView( onTap: (){ Navigator.push(context, MaterialPageRoute(builder: (context) => My_UiCards()));} ,
+                title: "My_UiCards" , subtitle: "My_UiCards" ),
 
 
             //=======ListView Builder ===============
-            new ListTile(
-              title: new Text(" Slide Show Images"),
-              subtitle: new Text(" Slide Show Images"),
-              onTap: (){Navigator.push(context, MaterialPageRoute(builder: (context)=>My_SlideShowImages()),);},
-            ),
-            new Divider(),
+            _ItemListView( onTap: (){ Navigator.push(context, MaterialPageRoute(builder: (context) => My_TalentHire()));} ,
+                title: "My_UiCards" , subtitle: "My_UiCards" ),
+
+
+            //=======ListView Builder ===============
+            _ItemListView( onTap: (){ Navigator.push(context, MaterialPageRoute(builder: (context) => My_SlideShowImages()));} ,
+                title: "Slide Show Images" , subtitle: "Slide Show Images" ),
+
+
+           //=======ListView Builder ===============
+
+            _ItemListView( onTap: (){ Navigator.push(context, MaterialPageRoute(builder: (context) => FurnitureApp()));} ,
+                title: "FurnitureApp" , subtitle: "FurnitureApp" ),
+
+
+           //=======ListView Builder ===============
+            _ItemListView( onTap: (){ Navigator.push(context, MaterialPageRoute(builder: (context) => My_FoodRecipes()));} ,
+                title: "My_FoodRecipes" , subtitle: "My_FoodRecipes" ),
 
 
 
+           //=======ListView Builder ===============
+            _ItemListView( onTap: (){ Navigator.push(context, MaterialPageRoute(builder: (context) => My_CakesCatalog()));} ,
+                title: "My_CakesCatalog" , subtitle: "My_CakesCatalog" ),
 
 
 
+            _ItemListView( onTap: (){ Navigator.push(context, MaterialPageRoute(builder: (context) => My_loginpage()));} ,
+                title: "My_loginpage" , subtitle: " My_loginpage" ),
 
           ],
         ),
@@ -181,4 +155,34 @@ class _BirdState extends State<My_ListUI> {
       ),
     );
   }
+
+  GestureDetector _ItemListView({
+    GestureTapCallback onTap ,
+    String title: "name item",
+    String subtitle : "sadsada",
+  }) {
+    return GestureDetector(onTap: onTap,
+      child: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 15 ,vertical: 5),
+        child: new Container(
+          decoration: BoxDecoration(
+              color: Colors.blue.shade100.withOpacity(0.2),
+              borderRadius: BorderRadius.circular(6) ,border: Border.all(width: 1 ,color: Colors.blue.shade100)
+          ),
+          child:Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              new ListTile(
+                title: new Text(title,style: TextStyle(fontSize: 18 ,fontWeight: FontWeight.w400 ),),
+                subtitle: new Text(subtitle ,style: TextStyle(color: Colors.grey.shade500, fontSize: 13),),
+                trailing: Icon(Icons.arrow_forward_ios ,color: Colors.blue.withOpacity(0.5),),
+              )
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+
 }

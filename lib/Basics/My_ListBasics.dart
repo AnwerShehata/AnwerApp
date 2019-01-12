@@ -47,7 +47,9 @@
             appBar: new AppBar(
               elevation: 0.0,
               centerTitle: true,
-              title: new Text("${widget.nameAppbar}"),),
+              title: new Text("Basics"),
+              leading: IconButton(icon: Icon(Icons.arrow_back_ios), onPressed: (){Navigator.pop(context);}),
+            ),
 
 
 

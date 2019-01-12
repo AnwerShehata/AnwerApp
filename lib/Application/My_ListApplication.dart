@@ -22,7 +22,9 @@ class _BirdState extends State<My_ListApplication> {
         appBar: new AppBar(
           centerTitle: true,
           elevation: 0.0,
-          title: new Text("${widget.nameAppBar}"),),
+          title: new Text("Full Application"),
+          leading: IconButton(icon: Icon(Icons.arrow_back_ios), onPressed: (){Navigator.pop(context);}),
+        ),
 
 
         // --------- Body -----------------------------------------------------

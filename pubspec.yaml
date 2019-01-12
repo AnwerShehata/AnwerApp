@@ -26,6 +26,8 @@ dependencies:
   google_sign_in:
   cloud_firestore:
   flutter_staggered_grid_view:
+  firebase_messaging:
+  flutter_local_notifications:
 
 
 
@@ -67,6 +69,10 @@ flutter:
     - img/poster/pro6.jpg
     - img/poster/pro7.jpg
     - img/poster/pro8.jpg
+    - img/desk.png
+    - img/desks.png
+    - img/dresser.png
+    - img/dressers.png
 
   fonts:
        - family: Cairo
