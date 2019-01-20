@@ -67,7 +67,8 @@ class _BirdState extends State<My_Drawer> {
 
 
           new AboutListTile(icon: new Icon(Icons.account_balance),)
-        ],),),
+        ],),
+        ),
 
 
         body: Container(

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:anwerapp/HomeMesterApp.dart';
-import './Firebase/StudentApp/ui/My_ListViewStudent.dart';
-import './Firebase/Notification/My_NotificationMessaging.dart';
+import './Basics/My_SplashScreen.dart';
+import './Basics/PageView/HomePageView.dart';
 
 
 void main() => runApp(new MyApp());
@@ -10,14 +10,19 @@ class MyApp extends StatefulWidget {
 }
 
 class _BirdState extends State<MyApp> {
+
+  var roules = <String , WidgetBuilder>{
+    "/homeapp" : (BuildContext Context) => HomeMesterApp(),
+  };
+
   @override
   Widget build(BuildContext context) {
     return new MaterialApp(
       debugShowCheckedModeBanner: false,
-      home:  new HomeMesterApp(),
-//      home:  new My_ListViewStude طnt(),
-//      home:  new My_NotificationMessaging(),
+//      home:  new My_SplashScreen(),
+      home:  new HomePageView(),
 
+      routes: roules,
     );
   }
 }                               

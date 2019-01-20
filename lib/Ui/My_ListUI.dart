@@ -14,6 +14,7 @@ import '../Ui/FurnitureApp.dart';
 import './My_FoodRecipes.dart';
 import './My_CakesCatalog.dart';
 import './My_loginpage.dart';
+import './My_BackdropFilterOne.dart';
 
 
 class My_ListUI extends StatefulWidget {
@@ -146,6 +147,10 @@ class _BirdState extends State<My_ListUI> {
 
             _ItemListView( onTap: (){ Navigator.push(context, MaterialPageRoute(builder: (context) => My_loginpage()));} ,
                 title: "My_loginpage" , subtitle: " My_loginpage" ),
+
+
+            _ItemListView( onTap: (){ Navigator.push(context, MaterialPageRoute(builder: (context) => My_BackdropFilterOne()));} ,
+                title: "Backdrop Filter" , subtitle: "عمل الكونتينر بلور بدرجة شفافية" ),
 
           ],
         ),

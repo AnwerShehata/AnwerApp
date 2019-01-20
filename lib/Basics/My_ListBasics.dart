@@ -19,6 +19,9 @@
   import 'package:anwerapp/Basics/My_Drawer.dart';
   import 'package:anwerapp/Basics/Data/My_DataOne.dart';
   import 'package:anwerapp/Ui/My_SlidShow.dart';
+  import './My_Wrap.dart';
+  import './My_Expansion.dart';
+  import 'My_SliverAppBar3.dart';
 
 
 
@@ -48,6 +51,7 @@
               elevation: 0.0,
               centerTitle: true,
               title: new Text("Basics"),
+              backgroundColor: Colors.pink,
               leading: IconButton(icon: Icon(Icons.arrow_back_ios), onPressed: (){Navigator.pop(context);}),
             ),
 
@@ -83,189 +87,119 @@
 
 
                 //=======Floating Action Button ===============
-                  new ListTile(
-                    title: new Text("Floating Action Button"),
-                    subtitle: new Text(" Floating Action Button"),
-                    onTap: (){Navigator.push(context, MaterialPageRoute(builder: (context)=>My_FloatingActionButton()),);},
-                  ),
-                  new Divider(),
+                  _ItemListView( onTap: (){ Navigator.push(context, MaterialPageRoute(builder: (context) => My_FloatingActionButton()));} ,
+                      title: "Floating Action Button" , subtitle: " Floating Action Button" ),
 
 
                    //=======_bottom Navigation Bart ===============
-                  new ListTile(
-                    title: new Text("Bottom Navigation Bar"),
-                    subtitle: new Text(" Bottom Navigation Bar"),
-                    onTap: (){Navigator.push(context, MaterialPageRoute(builder: (context)=>My_bottomNavigationBar()),);},
-                  ),
-                  new Divider(),
+                  _ItemListView( onTap: (){ Navigator.push(context, MaterialPageRoute(builder: (context) =>   My_bottomNavigationBar()));} ,
+                      title: " Bottom Navigation Bar" , subtitle: "Bottom Navigation Bar " ),
 
 
                   //=======Button And Text ===============
-                  new ListTile(
-                    title: new Text("Button And Text"),
-                    subtitle: new Text(" Button And Text"),
-                    onTap: (){Navigator.push(context, MaterialPageRoute(builder: (context)=>My_ButtonAndText()),);},
-                  ),
-                  new Divider(),
+                  _ItemListView( onTap: (){ Navigator.push(context, MaterialPageRoute(builder: (context) =>  My_ButtonAndText ()));} ,
+                      title: "Button And Text" , subtitle: "Button And Text " ),
 
 
                    //=======Card View Layout ===============
-                  new ListTile(
-                    title: new Text("Card View Layou"),
-                    subtitle: new Text(" Card View Layou"),
-                    onTap: (){Navigator.push(context, MaterialPageRoute(builder: (context)=>My_CardLayout()),);},
-                  ),
-                  new Divider(),
+                  _ItemListView( onTap: (){ Navigator.push(context, MaterialPageRoute(builder: (context) => My_CardLayout  ()));} ,
+                      title: "Card View Layou" , subtitle: "Card View Layou " ),
+
 
                    //======= checkbox ===============
-                  new ListTile(
-                    title: new Text("checkbox"),
-                    subtitle: new Text(" checkbox"),
-                    onTap: (){Navigator.push(context, MaterialPageRoute(builder: (context)=>My_checkbox()),);},
-                  ),
-                  new Divider(),
+                  _ItemListView( onTap: (){ Navigator.push(context, MaterialPageRoute(builder: (context) => My_checkbox  ()));} ,
+                      title: "checkbox" , subtitle: " checkbox" ),
 
 
                   //======= Drawer ===============
-                  new ListTile(
-                    title: new Text(" Drawer"),
-                    subtitle: new Text(" Drawer"),
-                    onTap: (){Navigator.push(context, MaterialPageRoute(builder: (context)=>My_Drawer()),);},
-                  ),
-                  new Divider(),
+                  _ItemListView( onTap: (){ Navigator.push(context, MaterialPageRoute(builder: (context) =>   My_Drawer()));} ,
+                      title: "Drawer" , subtitle: " Drawer" ),
 
 
                    //=======_Notification Alert Dialog ===============
-                  new ListTile(
-                    title: new Text("Notification Alert Dialog"),
-                    subtitle: new Text("Alert Dialog / Button Seat  /SankBar / Simpl Dialog"),
-                    onTap: (){Navigator.push(context, MaterialPageRoute(builder: (context)=>My_NotificationAlertDialog()),);},
-                  ),
-                  new Divider(),
+                  _ItemListView( onTap: (){ Navigator.push(context, MaterialPageRoute(builder: (context) =>  My_NotificationAlertDialog ()));} ,
+                      title: "Notification Alert Dialog" , subtitle: "Alert Dialog / Button Seat  /SankBar / Simpl Dialog" ),
 
 
                     //=======TextInput ===============
-                    new ListTile(
-                      title: new Text("TextInput"),
-                      subtitle: new Text(" عند كتاب ايه نص يقوم بالتغيير في النص الذي فوقة"),
-                      onTap: (){Navigator.push(context, MaterialPageRoute(builder: (context)=>My_TextInput()),);},
-                    ),
-                  new Divider(),
+                  _ItemListView( onTap: (){ Navigator.push(context, MaterialPageRoute(builder: (context) =>  My_TextInput ()));} ,
+                      title: "TextInput" , subtitle: " عند كتاب ايه نص يقوم بالتغيير في النص الذي فوقة" ),
+
 
                       //=======TextInput ===============
-                    new ListTile(
-                      title: new Text("Drop Down Button"),
-                      subtitle: new Text("هنا يتم عرض قوائم الاختيارات مثل Spinner "),
-                      onTap: (){Navigator.push(context, MaterialPageRoute(builder: (context)=>My_DropDownButton()),);},
-                    ),
-                  new Divider(),
+                  _ItemListView( onTap: (){ Navigator.push(context, MaterialPageRoute(builder: (context) => My_DropDownButton()));} ,
+                      title: "Drop Down Button" , subtitle: " هنا يتم عرض قوائم الاختيارات مثل Spinner" ),
 
 
                    //=======TextInput ===============
-                    new ListTile(
-                      title: new Text("TabBar View"),
-                      subtitle: new Text("هنا يتم عرض صفحات متعددة  في نفس المكان مثل Fragment"),
-                      onTap: (){Navigator.push(context, MaterialPageRoute(builder: (context)=>My_TabBarView()),);},
-                    ),
-                  new Divider(),
+                  _ItemListView( onTap: (){ Navigator.push(context, MaterialPageRoute(builder: (context) =>My_TabBarView   ()));} ,
+                      title: "TabBar View" , subtitle: " هنا يتم عرض صفحات متعددة  في نفس المكان مثل Fragment" ),
+
 
                     //=======ListView Builder ===============
-                    new ListTile(
-                      title: new Text("ListView Builde"),
-                      subtitle: new Text("هذا القائمة تعمل من RecyclerView"),
-                      onTap: (){Navigator.push(context, MaterialPageRoute(builder: (context)=>My_ListViewBuilder()),);},
-                    ),
-                  new Divider(),
+
+                  _ItemListView( onTap: (){ Navigator.push(context, MaterialPageRoute(builder: (context) =>  My_ListViewBuilder ()));} ,
+                      title: "ListView Builde" , subtitle: " هذا القائمة تعمل من RecyclerView" ),
+
 
                      //=======ListView Builder ===============
-                    new ListTile(
-                      title: new Text(" ListView Horizontal"),
-                      subtitle: new Text("مثال علي تطبيق الافلام "),
-                      onTap: (){Navigator.push(context, MaterialPageRoute(builder: (context)=>My_ListViewHorizontal()),);},
-                    ),
-                  new Divider(),
+                  _ItemListView( onTap: (){ Navigator.push(context, MaterialPageRoute(builder: (context) =>   My_ListViewHorizontal()));} ,
+                      title: "ListView Horizontal" , subtitle: " مثال علي تطبيق الافلام" ),
+
 
                   //=======ListView Builder ===============
-                  new ListTile(
-                    title: new Text(" Scroll Controller "),
-                    subtitle: new Text("عند الضغط علي الزر يتم الانتقال الي اسفل القائمة والعكس "),
-                    onTap: (){Navigator.push(context, MaterialPageRoute(builder: (context)=>My_ScrollController()),);},
-                  ),
-                  new Divider(),
+                  _ItemListView( onTap: (){ Navigator.push(context, MaterialPageRoute(builder: (context) =>  My_ScrollController ()));} ,
+                      title: "Scroll Controller" , subtitle: " عند الضغط علي الزر يتم الانتقال الي اسفل القائمة والعكس" ),
 
 
 
                    //=======ListView Builder ===============
-                  new ListTile(
-                    title: new Text(" SwipeTo Dismiss "),
-                    subtitle: new Text("عند السحب من اليمن الي اليسار يتم حذف العنصر "),
-                    onTap: (){Navigator.push(context, MaterialPageRoute(builder: (context)=>My_SwipeToDismiss()),);},
-                  ),
-                  new Divider(),
+                  _ItemListView( onTap: (){ Navigator.push(context, MaterialPageRoute(builder: (context) => My_SwipeToDismiss  ()));} ,
+                      title: " SwipeTo Dismiss" , subtitle: " عند السحب من اليمن الي اليسار يتم حذف العنصر" ),
 
 
 
                    //=======ListView Builder ===============
-                  new ListTile(
-                    title: new Text(" Opne Image New Activity"),
-                    subtitle: new Text("فتح الصورة في صفحة جديدة مثل تطبيق الافلام"),
-                    onTap: (){Navigator.push(context, MaterialPageRoute(builder: (context)=>My_OpneImageNewActivity()),);},
-                  ),
-                  new Divider(),
+                  _ItemListView( onTap: (){ Navigator.push(context, MaterialPageRoute(builder: (context) =>   My_OpneImageNewActivity()));} ,
+                      title: "Opne Image New Activity" , subtitle: " فتح الصورة في صفحة جديدة مثل تطبيق الافلام" ),
 
 
                    //=======ListView Builder ===============
-                  new ListTile(
-                    title: new Text(" GridView "),
-                    subtitle: new Text("GridView"),
-                    onTap: (){Navigator.push(context, MaterialPageRoute(builder: (context)=>My_GridView()),);},
-                  ),
-                  new Divider(),
+                  _ItemListView( onTap: (){ Navigator.push(context, MaterialPageRoute(builder: (context) =>  My_GridView ()));} ,
+                      title: "GridView" , subtitle: " GridView" ),
 
 
 
                    //=======ListView Builder ===============
-                  new ListTile(
-                    title: new Text("  Sliver AppBar "),
-                    subtitle: new Text("Sliver AppBar"),
-                    onTap: (){Navigator.push(context, MaterialPageRoute(builder: (context)=>My_SliverAppBar()),);},
-                  ),
-                  new Divider(),
+                  _ItemListView( onTap: (){ Navigator.push(context, MaterialPageRoute(builder: (context) =>   My_SliverAppBar()));} ,
+                      title: "Sliver AppBar" , subtitle: " Sliver AppBar" ),
 
 
                    //=======ListView Builder ===============
-                  new ListTile(
-                    title: new Text("  Sliver AppBar 2 "),
-                    subtitle: new Text("Sliver AppBar 2"),
-                    onTap: (){Navigator.push(context, MaterialPageRoute(builder: (context)=>My_SliverAppBar2()),);},
-                  ),
-                  new Divider(),
+                  _ItemListView( onTap: (){ Navigator.push(context, MaterialPageRoute(builder: (context) =>  My_SliverAppBar2 ()));} ,
+                      title: "Sliver AppBar 2" , subtitle: " Sliver AppBar 2" ),
 
 
                    //=======ListView Builder ===============
-                  new ListTile(
-                    title: new Text(" Data One "),
-                    subtitle: new Text("ارسال البيانات من صفحة الي صفحة اخري"),
-                    onTap: (){Navigator.push(context, MaterialPageRoute(builder: (context)=>My_DataOne()),);},
-                  ),
-                  new Divider(),
-
+                  _ItemListView( onTap: (){ Navigator.push(context, MaterialPageRoute(builder: (context) =>   My_DataOne()));} ,
+                      title: "Data One" , subtitle: " ارسال البيانات من صفحة الي صفحة اخري" ),
 
 
                    //=======ListView Builder ===============
-                  new ListTile(
-                    title: new Text(" Slid Show "),
-                    subtitle: new Text(" سلايدر جاهز يتحرك اتوماتيك "),
-                    onTap: (){Navigator.push(context, MaterialPageRoute(builder: (context)=>My_SlidShow()),);},
-                  ),
-                  new Divider(),
+                  _ItemListView( onTap: (){ Navigator.push(context, MaterialPageRoute(builder: (context) => My_SlidShow  ()));} ,
+                      title: "Slid Show" , subtitle: " سلايدر جاهز يتحرك اتوماتيك" ),
 
+                   //=======ListView Builder ===============
+                  _ItemListView( onTap: (){ Navigator.push(context, MaterialPageRoute(builder: (context) => My_Wrap  ()));} ,
+                      title: "My_Wrap" , subtitle: " My_Wrap" ),
 
+                   //=======ListView Builder ===============
+                  _ItemListView( onTap: (){ Navigator.push(context, MaterialPageRoute(builder: (context) => My_Expansion  ()));} ,
+                      title: "Expansion" , subtitle: "My_Expansion" ),
 
-
-
-
-
+                   //=======ListView Builder ===============
+                  _ItemListView( onTap: (){ Navigator.push(context, MaterialPageRoute(builder: (context) => My_SliverAppBar3  ()));} ,
+                      title: "SliverAppBar " , subtitle: "Expansion" ),
 
                 ],
               ),
@@ -275,4 +209,36 @@
         ),
       );
     }
+
+
+    GestureDetector _ItemListView({
+      GestureTapCallback onTap ,
+      String title: "name item",
+      String subtitle : "sadsada",
+    }) {
+      return GestureDetector(onTap: onTap,
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 15 ,vertical: 5),
+          child: new Container(
+            decoration: BoxDecoration(
+                color: Colors.pink.shade100.withOpacity(0.2),
+                borderRadius: BorderRadius.circular(6) ,border: Border.all(width: 1 ,color: Colors.pink.shade100)
+            ),
+            child:Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: <Widget>[
+                new ListTile(
+                  title: new Text(title,style: TextStyle(fontSize: 18 ,fontWeight: FontWeight.w400 ),),
+                  subtitle: new Text(subtitle ,style: TextStyle(color: Colors.grey.shade500, fontSize: 13),),
+                  trailing: Icon(Icons.arrow_forward_ios ,color: Colors.pink.withOpacity(0.5),),
+                )
+              ],
+            ),
+          ),
+        ),
+      );
+    }
+
+
   }

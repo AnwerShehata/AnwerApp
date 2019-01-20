@@ -32,8 +32,10 @@ class _BirdState extends State<My_ListViewHorizontal> {
             children: <Widget>[
 
               //====  قسم افلام رومانسية =======
-              _NameSection(" افلام رومانسي"),                // هنا يتم استدعاء الداله التي تحمل اسم القسم
-              new Container( height: 250.0,
+              _NameSection(" افلام رومانسي"),
+              // هنا يتم استدعاء الداله التي تحمل اسم القسم
+              new Container(
+                height: 250.0,
                 child: ListView(
                   scrollDirection: Axis.horizontal,
                   padding: EdgeInsets.all(5.0),
@@ -86,6 +88,7 @@ class _BirdState extends State<My_ListViewHorizontal> {
                   ],
                 ),
               ),
+
               new Padding(padding: EdgeInsets.all(20.0)),
 
 

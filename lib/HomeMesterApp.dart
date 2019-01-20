@@ -28,7 +28,7 @@ class _BirdState extends State<HomeMesterApp> {
 
 
       home: new Scaffold(
-//        backgroundColor: Color(0xFF0a013a),
+        backgroundColor: Color(0xFF0a013a),
 
         //-------- AppBar -------------------------------------------------
         appBar: new AppBar(
@@ -53,15 +53,15 @@ class _BirdState extends State<HomeMesterApp> {
                   onTap: (){Navigator.push(context, MaterialPageRoute(builder: (context)=> My_ListBasics()));}
                 ),
 
-                _buildStackSections(context , title: _NameUiDesign , description: "امثلة على تصميم الصفحات" , myIcon: Icons.settings ,
+                _buildStackSections(context , title: _NameUiDesign , description: "امثلة على تصميم الصفحات" , myIcon: Icons.color_lens ,
                   onTap: (){Navigator.push(context, MaterialPageRoute(builder: (context)=> My_ListUI()));}
                 ),
 
-                _buildStackSections(context , title: _NameAdvanced , description: "امثلة متقدمة في فلاتر" , myIcon: Icons.settings ,
+                _buildStackSections(context , title: _NameAdvanced , description: "امثلة متقدمة في فلاتر" , myIcon: Icons.child_friendly ,
 //                  onTap: (){Navigator.push(context, MaterialPageRoute(builder: (context)=>()));}
                 ),
 
-                _buildStackSections(context , title: _NameFirebase , description: "ربط التطبيق بقواعد بيانات الفايربيس" , myIcon: Icons.settings ,
+                _buildStackSections(context , title: _NameFirebase , description: "ربط التطبيق بقواعد بيانات الفايربيس" , myIcon: Icons.cloud_upload ,
                   onTap: (){Navigator.push(context, MaterialPageRoute(builder: (context)=> My_ListFirebase()));}
                 ),
 
@@ -69,7 +69,7 @@ class _BirdState extends State<HomeMesterApp> {
 //                  onTap: (){Navigator.push(context, MaterialPageRoute(builder: (context)=> My_ListFirebase()));}
                 ),
 
-                _buildStackSections(context , title: _NameApplication , description: "تطبيقات كاملة" , myIcon: Icons.settings ,
+                _buildStackSections(context , title: _NameApplication , description: "تطبيقات كاملة" , myIcon: Icons.phone_iphone ,
                   onTap: (){Navigator.push(context, MaterialPageRoute(builder: (context)=> My_ListApplication()));}
                 ),
 
