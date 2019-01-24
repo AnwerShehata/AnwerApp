@@ -68,4 +68,12 @@ configurations.all {
     }
 }
 
+android {
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+
 apply plugin: 'com.google.gms.google-services'

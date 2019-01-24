@@ -10,33 +10,33 @@ class HomePageView extends StatefulWidget {
 
 class _BirdState extends State<HomePageView> {
 
-  List<Widget> mypage =[PageOne() , PageTwo() , PageThree() , PageFour()];
+  List<Widget> mypage = [PageOne(), PageTwo(), PageThree(), PageFour()];
 
   @override
   Widget build(BuildContext context) {
     return new MaterialApp(
       debugShowCheckedModeBanner: false,
-      home:  new Scaffold(
+      home: new Scaffold(
+
+        appBar: AppBar(
+          title:Text("Page View" ,style: TextStyle(fontSize: 30 , fontWeight: FontWeight.w300),),
+          elevation: 0,
+          backgroundColor: Colors.blueGrey[700],
+          leading: IconButton(icon: Icon(Icons.arrow_back_ios), onPressed: (){Navigator.pop(context);}),
+        ),
 
 
         body: Column(
           children: <Widget>[
-/*
-
-            new Container(
-              height: 200, color: Colors.black,
-            ),
-
-*/
 
             new Expanded(
-              child:PageView.builder(
-              itemBuilder: (context , position)  => mypage[position],
-              itemCount: mypage.length,
-              scrollDirection: Axis.horizontal,
+              child: PageView.builder(
+                itemBuilder: (context, position) => mypage[position],
+                itemCount: mypage.length,
+                scrollDirection: Axis.horizontal,
                 pageSnapping: true,
                 physics: BouncingScrollPhysics(),
-            ) ,),
+              ),),
 
 
           ],

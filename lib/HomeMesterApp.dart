@@ -4,6 +4,7 @@ import 'package:anwerapp/HomeMesterApp.dart';
 import 'package:anwerapp/Ui/My_ListUI.dart';
 import 'package:anwerapp/Application/My_ListApplication.dart';
 import 'package:anwerapp/Firebase/My_ListFirebase.dart';
+import './GoogleMaps/My_ListGoogleMaps.dart';
 
 
 
@@ -15,6 +16,7 @@ class _BirdState extends State<HomeMesterApp> {
 
   String _NameUiDesign = "Flutter Ui Design";
   String _NameBasics = "Flutter  Basics";
+  String _NameMaps = "Flutter  Google Maps";
   String _NameAdvanced = "Flutter Advanced";
   String _NameAnimation = "Flutter Animation";
   String _NameFirebase = "Flutter Firebase";
@@ -55,6 +57,10 @@ class _BirdState extends State<HomeMesterApp> {
 
                 _buildStackSections(context , title: _NameUiDesign , description: "امثلة على تصميم الصفحات" , myIcon: Icons.color_lens ,
                   onTap: (){Navigator.push(context, MaterialPageRoute(builder: (context)=> My_ListUI()));}
+                ),
+
+                _buildStackSections(context , title: _NameMaps , description: "امثلة على الخرايط" , myIcon: Icons.color_lens ,
+                  onTap: (){Navigator.push(context, MaterialPageRoute(builder: (context)=> My_ListGoogleMaps()));}
                 ),
 
                 _buildStackSections(context , title: _NameAdvanced , description: "امثلة متقدمة في فلاتر" , myIcon: Icons.child_friendly ,

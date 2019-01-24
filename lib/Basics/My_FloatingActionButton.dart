@@ -13,6 +13,7 @@ class My_FloatingActionButton extends StatelessWidget{
         //------------------ App bar -----------------------------------------------------------------
         appBar:  new AppBar(
           centerTitle: true,
+          elevation: 0,
           title: new Text("Floating Action Button" ,
             style: new TextStyle(
               fontWeight: FontWeight.w300 ,
@@ -33,9 +34,10 @@ class My_FloatingActionButton extends StatelessWidget{
 
 
         bottomNavigationBar: BottomAppBar(
+          elevation:0,
           color: Colors.amber,
           shape: CircularNotchedRectangle() ,
-          notchMargin:5.0,
+          notchMargin:7,
           child: Container(
             child: new Row(
               mainAxisSize: MainAxisSize.max,

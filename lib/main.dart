@@ -1,7 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:anwerapp/HomeMesterApp.dart';
 import './Basics/My_SplashScreen.dart';
-import './Basics/PageView/HomePageView.dart';
+import './Advanced/My_ChatApp.dart';
+import './Advanced/My_ChatApp.dart';
+import './Ui/My_slideCarousel.dart';
+import './Basics/My_Charts.dart';
+import './Basics/My_FloatingActionButton_unicorndial.dart';
+
 
 
 void main() => runApp(new MyApp());
@@ -19,8 +24,8 @@ class _BirdState extends State<MyApp> {
   Widget build(BuildContext context) {
     return new MaterialApp(
       debugShowCheckedModeBanner: false,
-//      home:  new My_SplashScreen(),
-      home:  new HomePageView(),
+       home:  new My_SplashScreen(),
+    // home:  new Chat(),
 
       routes: roules,
     );

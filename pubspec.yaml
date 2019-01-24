@@ -28,8 +28,13 @@ dependencies:
   flutter_staggered_grid_view:
   firebase_messaging:
   flutter_local_notifications:
-  flutter_launcher_icons: "^0.7.0"
-
+  flutter_launcher_icons:
+  video_player:
+  carousel_slider:
+  flutter_sparkline:
+  flutter_circular_chart:
+  font_awesome_flutter:
+  unicorndial:
 
 
 flutter_icons:
@@ -72,6 +77,7 @@ flutter:
     - img/dresser.png
     - img/dressers.png
     - img/appicon.png
+    - img/Introducing.mp4
 
   fonts:
        - family: Cairo

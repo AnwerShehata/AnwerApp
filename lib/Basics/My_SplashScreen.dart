@@ -44,7 +44,7 @@ class _BirdState extends State<My_SplashScreen> {
                   Stack(
                     children: <Widget>[
                       Container(
-                        height: 250, width: 250,
+                        height: 180, width: 180,
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(150),
                           gradient: LinearGradient(
@@ -58,7 +58,7 @@ class _BirdState extends State<My_SplashScreen> {
                       Positioned(
                         top: 10, bottom: 10, left: 10, right: 10,
                         child: Container(
-                          height: 180, width: 180,
+                          height: 190, width: 190,
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(150),
                             gradient: LinearGradient(
@@ -75,7 +75,7 @@ class _BirdState extends State<My_SplashScreen> {
                   ),
 
                   SizedBox(height: 20),
-                  Text("Welcom To Example Flutter" , style: TextStyle(fontSize: 30 , color: Colors.white),)
+                  Text("Welcom To Example Flutter" , style: TextStyle(fontSize: 20 , color: Colors.white),)
 
 
                 ],

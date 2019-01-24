@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+
 
 class PageOne extends StatefulWidget {
   _BirdState createState() => new _BirdState();
@@ -12,14 +14,15 @@ class _BirdState extends State<PageOne> {
       home:  new Scaffold(
 
 
+
         body: Container(
-          color: Colors.red,
+          color: Colors.red[400],
 
           child: ListView(
             children: <Widget>[
 
               SizedBox(height: 100),
-              Icon(Icons.home ,size: 300, color: Colors.white,),
+              Icon(FontAwesomeIcons.fly,size: 300, color: Colors.white,),
 
               SizedBox(height: 150),
               Center(child: Text("Welcom to PageOne" ,style: TextStyle(fontSize: 35 ,color: Colors.white),)),

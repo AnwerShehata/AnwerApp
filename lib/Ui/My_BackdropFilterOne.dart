@@ -18,7 +18,7 @@ class _BirdState extends State<My_BackdropFilterOne> {
         body: Container(
           decoration: BoxDecoration(
             image: DecorationImage(fit: BoxFit.fitHeight,
-                image: NetworkImage("https://hdqwalls.com/download/pirate-sail-1125x2436.jpg")),
+                image: NetworkImage("https://images.pexels.com/photos/1769376/pexels-photo-1769376.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500")),
           ),
           child: ListView(
             children: <Widget>[
