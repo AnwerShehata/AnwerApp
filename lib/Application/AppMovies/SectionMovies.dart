@@ -21,7 +21,8 @@ class _BirdState extends State<SectionMovies> {
 
           new Container(
             child: InkWell(onTap: (){print(" مسلسلات رمضان 2019");},
-              child: Stack(alignment: Alignment.bottomCenter,
+              child: Stack(
+                alignment: Alignment.bottomCenter,
                 children: <Widget>[
 
                   new Container(

@@ -15,13 +15,15 @@
         TextInputType  TextInput,
         int maxLines,
         double  Radius,
-        IconData prefixIcon: Icons.search
+        IconData prefixIcon: Icons.search,
+        ValueChanged  onChanged,
         }) {
         return new Container(
         padding: EdgeInsets.symmetric(horizontal: horizontal ,vertical: vertical ),
         decoration: new BoxDecoration(
         ),
         child: TextField(
+        onChanged:  onChanged,
         keyboardType: TextInput,
         controller:  controllers,
         maxLines: maxLines,
@@ -49,12 +51,14 @@
         TextInputType  TextInput,
         int maxLines,
         double  Radius,
+        ValueChanged  onChanged,
         }) {
         return new Container(
         padding: EdgeInsets.symmetric(horizontal: horizontal ,vertical: vertical ),
         decoration: new BoxDecoration(
         ),
         child: TextField(
+        onChanged: onChanged,
         keyboardType: TextInput,
         controller:  controllers,
         maxLines: maxLines,
@@ -82,6 +86,7 @@
         double prefixIconSize,
         Color prefixIconColor,
         TextInputType  textInputType,
+        ValueChanged  onChanged,
         }){
         textInputType == null ? textInputType = TextInputType.text : textInputType;
         return Padding(

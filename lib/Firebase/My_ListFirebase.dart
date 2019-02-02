@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:anwerapp/Firebase/My_GoogleSignin.dart';
-import 'package:anwerapp/Firebase/My_TestFirebase.dart';
-import 'package:anwerapp/Firebase/My_DatabaseRealtime.dart';
+import './StudentApp/ui/My_ListViewStudent.dart';
+import './CloudFirebase/PageLogin.dart';
+import './Authentication/Ui/My_loginpage.dart';
+
 class My_ListFirebase extends StatefulWidget {
 
   final String nameAppBar;
@@ -36,16 +37,16 @@ class _BirdState extends State<My_ListFirebase> {
 
 
             //=======Floating Action Button ===============
-            _ItemListView( onTap: (){ Navigator.push(context, MaterialPageRoute(builder: (context) => My_TestFirebase ()));} ,
-                title: " Test Firebase" , subtitle: " ربط التطبيق مع قاعدة بيانات" ),
+            _ItemListView( onTap: (){ Navigator.push(context, MaterialPageRoute(builder: (context) =>   My_ListViewStudent()));} ,
+                title: " App Student" , subtitle: "  Realtime اضافة وخذف وتعديل البيانات" ),
 
             //=======Floating Action Button ===============
-            _ItemListView( onTap: (){ Navigator.push(context, MaterialPageRoute(builder: (context) =>  My_GoogleSignin()));} ,
-                title: "  Google SignIn" , subtitle: " تسجيل الدخول باستخدام Gmail" ),
+            _ItemListView( onTap: (){ Navigator.push(context, MaterialPageRoute(builder: (context) =>   PageLogin()));} ,
+                title: " CloudFirebase" , subtitle: " اضافة وخذف وتعديل البيانات" ),
 
-            //=======Floating Action Button ===============
-            _ItemListView( onTap: (){ Navigator.push(context, MaterialPageRoute(builder: (context) =>   My_DatabaseRealtime()));} ,
-                title: " Database Realtime " , subtitle: " اضافة وخذف وتعديل البيانات" ),
+         //=======Floating Action Button ===============
+            _ItemListView( onTap: (){ Navigator.push(context, MaterialPageRoute(builder: (context) =>   My_loginpage()));} ,
+                title: " Page Login" , subtitle: " صفحة تسجيل الدخول باستخدام الايميل " ),
 
 
           ],

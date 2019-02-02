@@ -18,6 +18,25 @@
 	<string>$(FLUTTER_BUILD_NAME)</string>
 	<key>CFBundleSignature</key>
 	<string>????</string>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>com.googleusercontent.apps.743865669870-2pm5612vo2pgqvceq86l32lp9h661qmn</string>
+			</array>
+		</dict>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>com.example.anwerapp</string>
+			</array>
+		</dict>
+	</array>
 	<key>CFBundleVersion</key>
 	<string>$(FLUTTER_BUILD_NUMBER)</string>
 	<key>LSRequiresIPhoneOS</key>
@@ -41,20 +60,5 @@
 	</array>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<false/>
-
-	<key>CFBundleURLTypes</key>
-    <array>
-    	<dict>
-    		<key>CFBundleTypeRole</key>
-    		<string>Editor</string>
-    		<key>CFBundleURLSchemes</key>
-    		<array>
-    			<!-- TODO Replace this value: -->
-    			<!-- Copied from GoogleServices-Info.plist key REVERSED_CLIENT_ID -->
-    			<string>com.googleusercontent.apps.63001552672-dng215ru20jpoifgsfvgu9ctv0ssop26</string>
-    		</array>
-    	</dict>
-    </array>
-
 </dict>
 </plist>
