@@ -15,15 +15,13 @@
         TextInputType  TextInput,
         int maxLines,
         double  Radius,
-        IconData prefixIcon: Icons.search,
-        ValueChanged  onChanged,
+        IconData prefixIcon: Icons.search
         }) {
         return new Container(
         padding: EdgeInsets.symmetric(horizontal: horizontal ,vertical: vertical ),
         decoration: new BoxDecoration(
         ),
         child: TextField(
-        onChanged:  onChanged,
         keyboardType: TextInput,
         controller:  controllers,
         maxLines: maxLines,
@@ -51,14 +49,12 @@
         TextInputType  TextInput,
         int maxLines,
         double  Radius,
-        ValueChanged  onChanged,
         }) {
         return new Container(
         padding: EdgeInsets.symmetric(horizontal: horizontal ,vertical: vertical ),
         decoration: new BoxDecoration(
         ),
         child: TextField(
-        onChanged: onChanged,
         keyboardType: TextInput,
         controller:  controllers,
         maxLines: maxLines,
@@ -86,7 +82,6 @@
         double prefixIconSize,
         Color prefixIconColor,
         TextInputType  textInputType,
-        ValueChanged  onChanged,
         }){
         textInputType == null ? textInputType = TextInputType.text : textInputType;
         return Padding(
@@ -258,6 +253,37 @@
         );
         }
 
+        Widget my_IconInContainer({
+        IconData icon : Icons.add,
+        Color color1 :Colors.red,
+        Color color2 :Colors.amberAccent,
+        Color coloricon :Colors.black,
+        GestureTapCallback onTap ,
+        double heightWidth = 50,
+        double rightTopPositioned= 5,
+        }) {
+        return GestureDetector(onTap: onTap,
+        child: Stack(
+        children: <Widget>[
+        Container(height: heightWidth, width: heightWidth,
+        decoration: BoxDecoration(
+        color:color1,
+        borderRadius: BorderRadius.circular(50)
+        ),
+        ),
+        Positioned(
+        right:5,  top: 5,
+        child: Container(
+        height: heightWidth-10, width: heightWidth-10,
+        decoration: BoxDecoration(
+        color: color2,
+        borderRadius: BorderRadius.circular(50)
+        ),
+        child: Icon(icon , color: coloricon),
+        ),),],),);
+        }
+
+
 
         //===showSnackBar=========================================
         // لتشغيل SnacBar يجب وضع هذا الكود في نفس  الكلاس
@@ -291,9 +317,6 @@
         textHint == null ? textHint = "Enter Hint" : textHint;
         height == null ? height = 50.0 : height;
         //height !=null
-
-
-
         return Column(
         //mainAxisAlignment: MainAxisAlignment.start,
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -564,6 +587,87 @@
         items.add(new DropdownMenuItem(value: size, child: new Text(size)));
         }
         return items;
+        }
+
+
+
+//===================================================================================
+
+        class BottomWaveClipper extends CustomClipper<Path> {
+                @override
+                Path getClip(Size size) {
+                        var path = new Path();
+                        path.lineTo(0.0, size.height - 70);
+
+                        var firstControlPoint = new Offset(size.width / 4, size.height);
+                        var firstPoint = new Offset(size.width / 2, size.height);
+                        path.quadraticBezierTo(firstControlPoint.dx, firstControlPoint.dy,
+                            firstPoint.dx, firstPoint.dy);
+
+                        var secondControlPoint =
+                        new Offset(size.width - (size.width / 4), size.height);
+                        var secondPoint = new Offset(size.width, size.height - 70);
+                        path.quadraticBezierTo(secondControlPoint.dx, secondControlPoint.dy,
+                            secondPoint.dx, secondPoint.dy);
+
+                        path.lineTo(size.width, 0.0);
+                        path.close();
+
+                        return path;
+                }
+
+                @override
+                bool shouldReclip(CustomClipper<Path> oldClipper) => false;
+        }
+
+        class BottomWaveClipper2 extends CustomClipper<Path> {
+                @override
+                Path getClip(Size size) {
+                        var path = new Path();
+                        path.lineTo(0.0, size.height - 50);
+                        var firstControlPoint = new Offset(size.width / 4, size.height);
+                        var firstPoint = new Offset(size.width / 2, size.height);
+                        path.quadraticBezierTo(firstControlPoint.dx, firstControlPoint.dy,
+                        firstPoint.dx, firstPoint.dy);
+
+                        var secondControlPoint =
+                        new Offset(size.width - (size.width / 4), size.height);
+                        var secondPoint = new Offset(size.width, size.height - 73);
+                        path.quadraticBezierTo(secondControlPoint.dx, secondControlPoint.dy,
+                        secondPoint.dx, secondPoint.dy);
+
+                        path.lineTo(size.width, 0.0);
+                        path.close();
+                        return path;
+                }
+                @override
+                bool shouldReclip(CustomClipper<Path> oldClipper) => false;
+        }
+
+        class BottomWaveClipper3 extends CustomClipper<Path> {
+                @override
+                Path getClip(Size size) {
+                        var path = new Path();
+                        path.lineTo(0.0, size.height - 45);
+
+                        var firstControlPoint = new Offset(size.width / 4, size.height);
+                        var firstPoint = new Offset(size.width / 2, size.height);
+                        path.quadraticBezierTo(firstControlPoint.dx, firstControlPoint.dy,
+                            firstPoint.dx, firstPoint.dy);
+
+                        var secondControlPoint =
+                        new Offset(size.width - (size.width / 4), size.height);
+                        var secondPoint = new Offset(size.width, size.height - 45);
+                        path.quadraticBezierTo(secondControlPoint.dx, secondControlPoint.dy,
+                        secondPoint.dx, secondPoint.dy);
+
+                        path.lineTo(size.width, 0.0);
+                        path.close();
+                        return path;
+                }
+
+                @override
+                bool shouldReclip(CustomClipper<Path> oldClipper) => false;
         }
 
 

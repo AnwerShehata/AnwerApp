@@ -2,7 +2,9 @@
   import 'package:anwerapp/HomeMesterApp.dart';
   import './Basics/My_SplashScreen.dart';
   import './Basics/My_FloatingActionButton_unicorndial.dart';
-
+  import './Basics/My_Align.dart';
+  import './Application/CommerceApp/HomeCommerceApp.dart';
+  import './Application/CommerceApp/pages/loginPage.dart';
 
 
 
@@ -23,6 +25,9 @@
       return new MaterialApp(
         debugShowCheckedModeBanner: false,
          home:  new My_SplashScreen(),
+//         home:  new My_Align(),
+//         home:  new HomeCommerceApp(),
+//         home:  new loginPage(),
 //         home:  new My_FloatingActionButton_unicorndial(),
 
 

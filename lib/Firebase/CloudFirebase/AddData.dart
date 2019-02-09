@@ -61,6 +61,7 @@ class _BirdState extends State<AddData> {
   @override
   Widget build(BuildContext context) {
     return new MaterialApp(
+      theme: new ThemeData(fontFamily: "Cairo"),
       debugShowCheckedModeBanner: false,
       home:  new Scaffold(
 

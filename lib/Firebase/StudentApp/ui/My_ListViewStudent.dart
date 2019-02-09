@@ -55,6 +55,7 @@
           title: new Text("Student"),
           elevation: 0,
           centerTitle: true,
+          leading: IconButton(icon: Icon(Icons.arrow_back_ios), onPressed: (){Navigator.pop(context);}),
         ),
 
         //--------Body --------------------------------
@@ -140,27 +141,50 @@
         await Navigator.push(context, MaterialPageRoute(builder: (context) => My_StudentScreen(Student(null, '', '', '', '', ''))));
       }
 
-      //======= _simpleDialog ===========================
+        //======= _simpleDialog ===========================
         void _simpleDialog(BuildContext context, Student student,int position) async {
           switch (await showDialog(context: context,
               builder: (BuildContext context)
               {
                 return new SimpleDialog(
-                  title: const Text('هل تريد حذف هذا الطالب'),
+                  shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
+//                  title: const Text('هل تريد حذف هذا الطالب', style: TextStyle(fontFamily: "Cairo"),),
                   children: <Widget>[
 
-                    //هنا اذا تم الضغط علي نعم سوف يتم استدعاء دالة حذف العنصر
-                    new SimpleDialogOption(
-                      onPressed: (){_deleteStudent(context, student, position);},
-                      child:  const Text("نعم "),
-                    ) ,
+                    new Icon(Icons.delete , size: 100, color: Colors.red,),
+                    Center(child: new Text("هل تريد حذف الطالب",style: TextStyle(fontFamily: "Cairo" , fontSize: 17),)),
+                    Center(child: new Text(" ${itmes[position].name}",style: TextStyle(fontFamily: "Cairo" , fontSize: 15),)),
+                    SizedBox(height: 20,),
 
-                    //هنا اذا تم الضغط علي زر لا سوف يتم العود بدون فعل اي شي
-                    new SimpleDialogOption(
-                      onPressed: ()=> Navigator.pop(context) ,
-                      child: new Text("لا"),
+                    new Row( mainAxisAlignment: MainAxisAlignment.center,
+                      children: <Widget>[
+
+                        //هنا اذا تم الضغط علي نعم سوف يتم استدعاء دالة حذف العنصر
+                        new Container(alignment: Alignment.center,
+                          height: 60 , width: 120,
+                          decoration: BoxDecoration(
+                            color: Colors.blue, borderRadius: BorderRadius.only(topLeft: Radius.circular(10) ,bottomLeft: Radius.circular(10)),
+                          ),
+                          child:  new SimpleDialogOption(
+                            onPressed: (){_deleteStudent(context, student, position);},
+                            child:  const Text("نعم ", style: TextStyle(fontFamily: "Cairo"),),
+                          ) ,
+                        ),
+
+                        //هنا اذا تم الضغط علي زر لا سوف يتم العود بدون فعل اي شي
+                        new Container(alignment: Alignment.center,
+                          height: 60 , width: 120,
+                          decoration: BoxDecoration(
+                            color: Colors.amber, borderRadius: BorderRadius.only(topRight: Radius.circular(10) ,bottomRight: Radius.circular(10)),
+                          ),
+                          child:  new SimpleDialogOption(
+                            onPressed: (){Navigator.pop(context,true);} ,
+                            child: new Text("لا", style: TextStyle(fontFamily: "Cairo"),),
+                          ),
+                        ),
+
+                      ],
                     ),
-
 
                   ],
                 );

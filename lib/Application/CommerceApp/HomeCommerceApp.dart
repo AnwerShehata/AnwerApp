@@ -1,8 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:carousel_pro/carousel_pro.dart';
-import 'package:anwerapp/Application/CommerceApp/ListHorizontalShopingApp.dart';
-import 'package:anwerapp/Application/CommerceApp/AnwerDrawer.dart';
+import 'package:google_sign_in/google_sign_in.dart';
+import 'package:firebase_auth/firebase_auth.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
+
+import './componets/ListHorizontalShopingApp.dart';
+import './componets/AnwerDrawer.dart';
+import 'package:anwerapp/Tools/app_tools.dart';
+import './componets/products.dart';
+import './componets/StyleApp.dart';
+import '../CommerceApp/pages/Cart.dart';
+
 class HomeCommerceApp extends StatefulWidget {
+  final FirebaseUser user;
+  final GoogleSignIn googleSignIn;
+  const HomeCommerceApp({Key key, this.user, this.googleSignIn}) : super(key: key);
   _BirdState createState() => new _BirdState();
 }
 
@@ -21,14 +33,16 @@ class _BirdState extends State<HomeCommerceApp> {
         //---------------- App Bar ---------------------------------------
         appBar: new AppBar(
           centerTitle: false,
-          backgroundColor: Colors.pinkAccent,
+          backgroundColor: colorApp_pink,
           elevation: 0.0,
           title: new Text("Shop App"),
           actions: <Widget>[
             new IconButton(icon:Icon(Icons.search), onPressed: (){}),
-            new IconButton(icon: Icon(Icons.shopping_cart), onPressed: (){})
+            new IconButton(icon: Icon(Icons.shopping_cart), onPressed: (){Navigator.push(context, MaterialPageRoute(builder: (context) => Cart()),);})
           ],
         ),
+
+
 
         //---------------- Drawer ---------------------------------------
 //        drawer: _buildDrawer(),
@@ -36,17 +50,28 @@ class _BirdState extends State<HomeCommerceApp> {
 
 
         //---------------- Body ---------------------------------------
-        body: ListView(
+        body: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
 
+            //===== هنا الكود الخاص بالسلايد شو
             _buildCarouselSlide(),
+
             Padding(
               padding: const EdgeInsets.only(left: 20.0 ,top: 10.0),
               child: new Text("Categories " ,style: TextStyle(fontSize: 20.0),),
             ),
 
+            //======= هنا كود الاقسام
             ListHorizontalShopingApp(),
 
+            Padding(
+              padding: const EdgeInsets.only(left: 20.0),
+              child: new Text("Recent Products " ,style: TextStyle(fontSize: 20.0),),
+            ),
+
+
+            Flexible(child: products()),
 
 
           ],
@@ -58,7 +83,7 @@ class _BirdState extends State<HomeCommerceApp> {
     );
   }
 
-  Container _buildCarouselSlide() {
+  Widget _buildCarouselSlide() {
     return new Container(
             height: 200.0,
               child: new Carousel(

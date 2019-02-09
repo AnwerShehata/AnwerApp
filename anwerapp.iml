@@ -56,6 +56,12 @@
       <excludeFolder url="file://$MODULE_DIR$/ios/.symlinks/plugins/flutter_local_notifications/example/.dart_tool" />
       <excludeFolder url="file://$MODULE_DIR$/ios/.symlinks/plugins/flutter_local_notifications/example/.pub" />
       <excludeFolder url="file://$MODULE_DIR$/ios/.symlinks/plugins/flutter_local_notifications/example/build" />
+      <excludeFolder url="file://$MODULE_DIR$/ios/.symlinks/plugins/fluttertoast/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/ios/.symlinks/plugins/fluttertoast/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/ios/.symlinks/plugins/fluttertoast/build" />
+      <excludeFolder url="file://$MODULE_DIR$/ios/.symlinks/plugins/fluttertoast/example/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/ios/.symlinks/plugins/fluttertoast/example/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/ios/.symlinks/plugins/fluttertoast/example/build" />
       <excludeFolder url="file://$MODULE_DIR$/ios/.symlinks/plugins/google_maps_flutter/.dart_tool" />
       <excludeFolder url="file://$MODULE_DIR$/ios/.symlinks/plugins/google_maps_flutter/.pub" />
       <excludeFolder url="file://$MODULE_DIR$/ios/.symlinks/plugins/google_maps_flutter/build" />
@@ -68,6 +74,12 @@
       <excludeFolder url="file://$MODULE_DIR$/ios/.symlinks/plugins/google_sign_in/example/.dart_tool" />
       <excludeFolder url="file://$MODULE_DIR$/ios/.symlinks/plugins/google_sign_in/example/.pub" />
       <excludeFolder url="file://$MODULE_DIR$/ios/.symlinks/plugins/google_sign_in/example/build" />
+      <excludeFolder url="file://$MODULE_DIR$/ios/.symlinks/plugins/shared_preferences/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/ios/.symlinks/plugins/shared_preferences/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/ios/.symlinks/plugins/shared_preferences/build" />
+      <excludeFolder url="file://$MODULE_DIR$/ios/.symlinks/plugins/shared_preferences/example/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/ios/.symlinks/plugins/shared_preferences/example/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/ios/.symlinks/plugins/shared_preferences/example/build" />
       <excludeFolder url="file://$MODULE_DIR$/ios/.symlinks/plugins/video_player/.dart_tool" />
       <excludeFolder url="file://$MODULE_DIR$/ios/.symlinks/plugins/video_player/.pub" />
       <excludeFolder url="file://$MODULE_DIR$/ios/.symlinks/plugins/video_player/build" />
