@@ -9,10 +9,6 @@ class AnwerDrawer extends StatefulWidget {
 }
 
 class _BirdState extends State<AnwerDrawer> {
-
-  final GoogleSignIn googleSignIn = new GoogleSignIn();
-  FirebaseUser firebaseUser;
-
   @override
   Widget build(BuildContext context) {
 
@@ -22,8 +18,8 @@ class _BirdState extends State<AnwerDrawer> {
 
           // Header Drawer =====================
           new UserAccountsDrawerHeader(
-            accountName: Text(firebaseUser.displayName, style: TextStyle(color: Colors.black),),
-            accountEmail: Text(firebaseUser.email , style: TextStyle(color: Colors.black),),
+            accountName: Text("anwershehata", style: TextStyle(color: Colors.black),),
+            accountEmail: Text("anwershehata@gmail.com" , style: TextStyle(color: Colors.black),),
             decoration: BoxDecoration(
             ),
 

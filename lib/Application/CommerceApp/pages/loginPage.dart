@@ -3,7 +3,13 @@ import 'package:google_sign_in/google_sign_in.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:fluttertoast/fluttertoast.dart';
+import 'package:flutter_spinkit/flutter_spinkit.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+
+import '../componets/StyleApp.dart';
+import 'package:anwerapp/Tools/app_tools.dart';
+
+
 
 import '../HomeCommerceApp.dart';
 
@@ -26,6 +32,8 @@ class _BirdState extends State<loginPage> {
     isSignedIn();
   }
 
+  // اذا كانت المستخدم قام بتسجيل الدخول من قبل انتقال الي الصفحة الرئيسية اثناء تشغيل التطبيق
+  //واذا كان المستخدم لا يقوم بعمليت تسجيل الدخول سوف تظهر صفحة Login في البداية
   void isSignedIn()async {
     setState(() {
       loading = true;
@@ -33,16 +41,14 @@ class _BirdState extends State<loginPage> {
     preferences = await SharedPreferences.getInstance();
     isLogedin =await googleSignIn.isSignedIn();
     if(isLogedin == true){
-      Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=> HomeCommerceApp(
-        user: firebaseUser,
-        googleSignIn: googleSignIn,
-      )));
+      Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=> HomeCommerceApp()));
     }
     setState(() {
       loading = false;
     });
   }
 
+  // تسجيل الدخول باستخدام جوجل========
   Future handleSignIn()async{
     preferences = await SharedPreferences.getInstance();
     setState(() {
@@ -62,7 +68,9 @@ class _BirdState extends State<loginPage> {
       if(documents.length ==0){
         Firestore.instance.collection("Users").document(firebaseUser.uid).setData({
           "id" : firebaseUser.uid,
+          "email" : firebaseUser.email,
           "userName" : firebaseUser.displayName,
+          "phone" : firebaseUser.phoneNumber,
           "profilepicture" : firebaseUser.photoUrl
         });
         await preferences.setString("id", firebaseUser.uid);
@@ -73,7 +81,8 @@ class _BirdState extends State<loginPage> {
         await preferences.setString("userName", documents[0]["userName"]);
         await preferences.setString("photoUrl", documents[0]["photoUrl"]);
       }
-      Fluttertoast.showToast(msg: "Login was Successful");
+      // هنا بعد الانتهاء من عمليت تسجيل الدخول سوف يتم الانتقال الي الصفحة التالية
+      Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=> HomeCommerceApp()));
       setState(() {
         loading = false;
       });
@@ -87,27 +96,25 @@ class _BirdState extends State<loginPage> {
   @override
   Widget build(BuildContext context) {
     return new MaterialApp(
+      debugShowCheckedModeBanner: false,
       home:  new Scaffold(
 
-        body: Stack(
-          children: <Widget>[
-            
-            Center(
-              child: FlatButton(onPressed: (){handleSignIn();}, child: Text("Sign in / Sign up with google")),
-            ),
-            
-            Visibility(
-              visible:  loading ?? true,
-                child: Container(
-                  color: Colors.white.withOpacity(0.7),
-                  child: CircularProgressIndicator(
-                    valueColor: AlwaysStoppedAnimation<Color>(Colors.red),
-                  ),
-                )
-            )
-            
-          ],
+        //----------------- AppBar--------------
+        appBar: AppBar(
+          title: Text("Login"),
+          elevation: 0,
+          backgroundColor: colorApp_pink,
         ),
+
+       body: Container(
+         child: Center(child:my_FlatButton(
+           horizontal: 80,
+           textButton: "Login with Google",
+           colorRadius: Colors.red,radiusButton: 10,
+           colorText: Colors.red,
+           onPressed: (){handleSignIn();}
+         )),
+       ),
 
 
 

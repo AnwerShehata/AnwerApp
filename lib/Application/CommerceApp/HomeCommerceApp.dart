@@ -12,9 +12,6 @@ import './componets/StyleApp.dart';
 import '../CommerceApp/pages/Cart.dart';
 
 class HomeCommerceApp extends StatefulWidget {
-  final FirebaseUser user;
-  final GoogleSignIn googleSignIn;
-  const HomeCommerceApp({Key key, this.user, this.googleSignIn}) : super(key: key);
   _BirdState createState() => new _BirdState();
 }
 
