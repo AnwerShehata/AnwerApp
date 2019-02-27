@@ -1,20 +1,28 @@
 import 'package:flutter/material.dart';
 
 class My_bottomNavigationBar extends StatelessWidget{
+
+  List<BottomNavigationBar> _items;
+  String _value = "";
+  int _index = 0;
+
+
   @override
   Widget build(BuildContext context) {
     return new MaterialApp(
       debugShowCheckedModeBanner: false,
       home:  new Scaffold(
-        backgroundColor: Colors.white30,
+        backgroundColor: Colors.grey[200],
 
 
         // -------------- App Bar -----------------------------------------------------------------
         appBar: new AppBar(
           centerTitle: true,
           title:  new Text("Navigation Bar"),
+          elevation: 0,
         ),
 
+/*
 
         // -------------- Bbottom Navigation Bar --------------------------------------------
         bottomNavigationBar: new BottomNavigationBar(items:
@@ -40,6 +48,7 @@ class My_bottomNavigationBar extends StatelessWidget{
         ),
 
 
+*/
 
 
 

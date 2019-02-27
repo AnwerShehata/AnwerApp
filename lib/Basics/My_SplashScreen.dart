@@ -12,7 +12,7 @@ class _BirdState extends State<My_SplashScreen> {
   void initState() {
     // TODO: implement initState
     super.initState();
-    Timer(Duration(seconds: 3) ,()=> Navigator.pushNamed(context, "/homeapp"));
+    Timer(Duration(seconds: 3) ,()=> Navigator.pushReplacementNamed(context, "/homeapp"));
   }
 
   @override

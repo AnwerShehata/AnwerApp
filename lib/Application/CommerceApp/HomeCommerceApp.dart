@@ -10,12 +10,20 @@ import 'package:anwerapp/Tools/app_tools.dart';
 import './componets/products.dart';
 import './componets/StyleApp.dart';
 import '../CommerceApp/pages/Cart.dart';
+import './pages/loginPage.dart';
 
 class HomeCommerceApp extends StatefulWidget {
+  final GoogleSignIn googleSignIn;
+  const HomeCommerceApp({Key key, this.googleSignIn}) : super(key: key);
   _BirdState createState() => new _BirdState();
 }
 
 class _BirdState extends State<HomeCommerceApp> {
+
+  void _Sinout(){
+    widget.googleSignIn.signOut();
+    Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=> loginPage()));
+  }
 
 
   @override
@@ -32,10 +40,11 @@ class _BirdState extends State<HomeCommerceApp> {
           centerTitle: false,
           backgroundColor: colorApp_pink,
           elevation: 0.0,
-          title: new Text("Shop App"),
+          title: new Text("Shop"),
           actions: <Widget>[
             new IconButton(icon:Icon(Icons.search), onPressed: (){}),
-            new IconButton(icon: Icon(Icons.shopping_cart), onPressed: (){Navigator.push(context, MaterialPageRoute(builder: (context) => Cart()),);})
+            new IconButton(icon: Icon(Icons.shopping_cart), onPressed: (){Navigator.push(context, MaterialPageRoute(builder: (context) => Cart()),);}),
+            new IconButton(icon:Icon(Icons.exit_to_app), onPressed: (){_Sinout();}),
           ],
         ),
 

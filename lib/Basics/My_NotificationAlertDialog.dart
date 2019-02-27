@@ -11,6 +11,7 @@ class _BirdState extends State<My_NotificationAlertDialog> {
 
   //-- Method change name=====================================
   String nameDialog= "";
+
   void ChangeName(String name){
     setState(() {
       nameDialog=name;

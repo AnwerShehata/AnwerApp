@@ -1,17 +1,16 @@
 import 'package:flutter/material.dart';
 import '../componets/StyleApp.dart';
 import '../pages/Cart.dart';
-import 'package:google_sign_in/google_sign_in.dart';
-import 'package:firebase_auth/firebase_auth.dart';
-import 'package:cloud_firestore/cloud_firestore.dart';
+
+
 class AnwerDrawer extends StatefulWidget {
   _BirdState createState() => new _BirdState();
 }
 
 class _BirdState extends State<AnwerDrawer> {
+
   @override
   Widget build(BuildContext context) {
-
     return new Drawer(
       child: new ListView(
         children: <Widget>[
@@ -64,7 +63,7 @@ class _BirdState extends State<AnwerDrawer> {
           ),
 
           ListTile(
-            title: new Text("About "),
+            title: new Text("signOut "),
             leading: new Icon(Icons.announcement,color: Colors.green),
           ),
 

@@ -15,9 +15,9 @@ class AddData extends StatefulWidget {
 
 class _BirdState extends State<AddData> {
 
+  //===== هنا كود تحديد التاريخ
   DateTime _dueDate =new DateTime.now();
   String _dateText = "";
-
   Future<Null> _selectDueDate(BuildContext context) async {
     final picked = await showDatePicker(
         context: context,
@@ -33,6 +33,7 @@ class _BirdState extends State<AddData> {
     }
   }
 
+  // ====== هنا عند فتح التطبيق سوف يتم اظهار التاريخ
   @override
   void initState() {
     super.initState();
@@ -44,6 +45,8 @@ class _BirdState extends State<AddData> {
   TextEditingController taskController = new TextEditingController();
   TextEditingController noteController = new TextEditingController();
 
+
+  //====== هنا اضافة البيانات الي Firebase
   void _addData(){
     Firestore.instance.runTransaction((Transaction transaction) async{
       CollectionReference reference = Firestore.instance.collection("Task");
@@ -77,7 +80,6 @@ class _BirdState extends State<AddData> {
         //-----------------Body---------------------------------
         body: ListView(
           children: <Widget>[
-
             //===== Text new Task ======
             SizedBox(height: 10),
             Padding(

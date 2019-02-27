@@ -24,6 +24,9 @@
   import 'My_SliverAppBar3.dart';
   import '../Basics/PageView/HomePageView.dart';
   import 'My_FloatingActionButton_unicorndial.dart';
+  import '../TabBar/My_TabBarViewTwo.dart';
+  import './My_Stepper.dart';
+
 
   class My_ListBasics extends StatefulWidget {
 
@@ -134,6 +137,10 @@
                   _ItemListView( onTap: (){ Navigator.push(context, MaterialPageRoute(builder: (context) =>My_TabBarView   ()));} ,
                       title: "TabBar View" , subtitle: " هنا يتم عرض صفحات متعددة  في نفس المكان مثل Fragment" ),
 
+                   //=======TextInput ===============
+                  _ItemListView( onTap: (){ Navigator.push(context, MaterialPageRoute(builder: (context) =>My_TabBarViewTwo   ()));} ,
+                      title: "TabBar View Two" , subtitle: " هنا يتم عرض صفحات متعددة  في نفس المكان مثل Fragment" ),
+
 
                     //=======ListView Builder ===============
 
@@ -204,9 +211,15 @@
                   _ItemListView( onTap: (){ Navigator.push(context, MaterialPageRoute(builder: (context) => HomePageView  ()));} ,
                       title: " HomePageView " , subtitle: "HomePageView " ),
 
+
                    //=======ListView Builder ===============
                   _ItemListView( onTap: (){ Navigator.push(context, MaterialPageRoute(builder: (context) => My_FloatingActionButton_unicorndial  ()));} ,
                       title: " My_FloatingActionButton_unicorndial  " , subtitle: "HomePageView " ),
+
+
+                   //=======ListView Builder ===============
+                  _ItemListView( onTap: (){ Navigator.push(context, MaterialPageRoute(builder: (context) => My_Stepper()));} ,
+                      title: " Stepp " , subtitle: "My_Stepper " ),
 
                 ],
               ),

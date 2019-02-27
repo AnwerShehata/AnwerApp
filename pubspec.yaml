@@ -38,6 +38,8 @@ dependencies:
   flutter_spinkit:
   shared_preferences:
   fluttertoast:
+  url_launcher: ^5.0.1
+  flute_music_player: ^0.0.6
 
 
 flutter_icons:

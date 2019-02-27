@@ -41,7 +41,9 @@ class _BirdState extends State<loginPage> {
     preferences = await SharedPreferences.getInstance();
     isLogedin =await googleSignIn.isSignedIn();
     if(isLogedin == true){
-      Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=> HomeCommerceApp()));
+      Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=> HomeCommerceApp(
+        googleSignIn: googleSignIn,
+      )));
     }
     setState(() {
       loading = false;
@@ -49,7 +51,7 @@ class _BirdState extends State<loginPage> {
   }
 
   // تسجيل الدخول باستخدام جوجل========
-  Future handleSignIn()async{
+  Future _SignInWithGoogle()async{
     preferences = await SharedPreferences.getInstance();
     setState(() {
       loading = true;
@@ -82,7 +84,9 @@ class _BirdState extends State<loginPage> {
         await preferences.setString("photoUrl", documents[0]["photoUrl"]);
       }
       // هنا بعد الانتهاء من عمليت تسجيل الدخول سوف يتم الانتقال الي الصفحة التالية
-      Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=> HomeCommerceApp()));
+      Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=> HomeCommerceApp(
+        googleSignIn: googleSignIn,
+      )));
       setState(() {
         loading = false;
       });
@@ -101,22 +105,39 @@ class _BirdState extends State<loginPage> {
 
         //----------------- AppBar--------------
         appBar: AppBar(
-          title: Text("Login"),
+          title: Text("Login Page"),
           elevation: 0,
           backgroundColor: colorApp_pink,
         ),
 
-       body: Container(
-         child: Center(child:my_FlatButton(
-           horizontal: 80,
-           textButton: "Login with Google",
-           colorRadius: Colors.red,radiusButton: 10,
-           colorText: Colors.red,
-           onPressed: (){handleSignIn();}
-         )),
-       ),
+
+        body: ListView(
+          children: <Widget>[
+
+            SizedBox(height: 300),
+            my_ButtonIcon(
+              horizontal: 80 , radiusButton: 10, colorButton: Colors.red,
+              textButton: "Sign in With Google",  icon: FontAwesomeIcons.google,
+              onPressed: (){_SignInWithGoogle();}
+            ),
+
+            SizedBox(height: 10),
+            my_ButtonIcon(
+              horizontal: 80 , radiusButton: 10, colorButton: Colors.blue.shade900,
+              textButton: "Sign in With facebook",  icon: FontAwesomeIcons.facebookF,
+              onPressed: (){}
+            ),
+
+            SizedBox(height: 10),
+            my_ButtonIcon(
+              horizontal: 80 , radiusButton: 10, colorButton: Colors.blue,
+              textButton: "Sign in With Twitter",  icon: FontAwesomeIcons.twitter,
+              onPressed: (){}
+            ),
 
 
+          ],
+        ),
 
       ),
     );

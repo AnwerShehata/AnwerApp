@@ -17,6 +17,7 @@
   import './My_BackdropFilterOne.dart';
   import './My_slideCarousel.dart';
   import 'My_spinkit.dart';
+  import './My_DynamicTheming.dart';
 
 
   class My_ListUI extends StatefulWidget {
@@ -160,6 +161,10 @@
 
               _ItemListView( onTap: (){ Navigator.push(context, MaterialPageRoute(builder: (context) => My_spinkit()));} ,
                   title: "spinkit" , subtitle: "صفحة التحميل" ),
+
+
+              _ItemListView( onTap: (){ Navigator.push(context, MaterialPageRoute(builder: (context) => My_DynamicTheming()));} ,
+                  title: "DynamicTheming" , subtitle: "DynamicTheming" ),
 
             ],
           ),
