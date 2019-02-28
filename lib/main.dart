@@ -28,9 +28,7 @@
       return new MaterialApp(
         debugShowCheckedModeBanner: false,
 
-//        home: new My_SplashScreen(),
-//        home: new My_url_launcher(),
-        home: new HomeAppMusic(),
+        home: new My_SplashScreen(),
         routes: roules,
       );
     }

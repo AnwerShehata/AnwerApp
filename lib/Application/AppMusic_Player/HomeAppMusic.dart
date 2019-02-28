@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flute_music_player/flute_music_player.dart';
-
 class HomeAppMusic extends StatefulWidget {
   _BirdState createState() => new _BirdState();
 }
