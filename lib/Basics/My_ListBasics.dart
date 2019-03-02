@@ -1,31 +1,37 @@
   import 'package:flutter/material.dart';
-  import 'package:anwerapp/Basics/My_FloatingActionButton.dart';
-  import 'package:anwerapp/Basics/My_bottomNavigationBar.dart';
-  import 'package:anwerapp/Basics/My_ButtonAndText.dart';
-  import 'package:anwerapp/Basics/My_CardLayout.dart';
-  import 'package:anwerapp/Basics/My_checkbox.dart';
-  import 'package:anwerapp/Basics/My_NotificationAlertDialog.dart';
-  import 'package:anwerapp/Basics/My_TextInput.dart';
-  import 'package:anwerapp/Basics/My_DropDownButton.dart';
+  import './My_FloatingActionButton.dart';
+  import './My_ButtonAndText.dart';
+  import './My_CardLayout.dart';
+  import './My_checkbox.dart';
+  import './My_NotificationAlertDialog.dart';
+  import './My_TextInput.dart';
+  import './My_DropDownButton.dart';
   import 'package:anwerapp/TabBar/My_TabBarView.dart';
-  import 'package:anwerapp/Basics/My_ListViewBuilder.dart';
-  import 'package:anwerapp/Basics/My_ListViewHorizontal.dart';
-  import 'package:anwerapp/Basics/My_ScrollController.dart';
-  import 'package:anwerapp/Basics/My_SwipeToDismiss.dart';
-  import 'package:anwerapp/Basics/My_OpneImageNewActivity.dart';
-  import 'package:anwerapp/Basics/My_GridView.dart';
-  import 'package:anwerapp/Basics/My_SliverAppBar.dart';
-  import 'package:anwerapp/Basics/My_SliverAppBar2.dart';
-  import 'package:anwerapp/Basics/My_Drawer.dart';
-  import 'package:anwerapp/Basics/Data/My_DataOne.dart';
+  import './My_ListViewBuilder.dart';
+  import './My_ListViewHorizontal.dart';
+  import './My_ScrollController.dart';
+  import './My_SwipeToDismiss.dart';
+  import './My_OpneImageNewActivity.dart';
+  import './My_GridView.dart';
+  import './My_SliverAppBar.dart';
+  import './My_SliverAppBar2.dart';
+  import './My_Drawer.dart';
+  import './Data/My_DataOne.dart';
   import 'package:anwerapp/Ui/My_SlidShow.dart';
   import './My_Wrap.dart';
   import './My_Expansion.dart';
   import 'My_SliverAppBar3.dart';
-  import '../Basics/PageView/HomePageView.dart';
+  import './PageView/HomePageView.dart';
   import 'My_FloatingActionButton_unicorndial.dart';
   import '../TabBar/My_TabBarViewTwo.dart';
   import './My_Stepper.dart';
+  import './My_url_launcher.dart';
+  import './PopupMenu/My_PopupMenuButton.dart';
+  import './My_bottomNavigationBar2.dart';
+  import './My_Chipskeyschildren.dart';
+  import './My_DatePicker.dart';
+  import './My_FooterButtons.dart';
+  import './My_SlidersIndicators.dart';
 
 
   class My_ListBasics extends StatefulWidget {
@@ -57,13 +63,6 @@
               leading: IconButton(icon: Icon(Icons.arrow_back_ios), onPressed: (){Navigator.pop(context);}),
             ),
 
-
-
-
-
-
-
-
             //----- floatingActionButton --------------------------------------------------------------------
             floatingActionButton: FloatingActionButton(
               backgroundColor: Colors.deepPurple.shade900,
@@ -93,9 +92,26 @@
                   _ItemListView( onTap: (){ Navigator.push(context, MaterialPageRoute(builder: (context) => My_FloatingActionButton()));} ,
                       title: "Floating Action Button" , subtitle: " Floating Action Button" ),
 
+
+                  _ItemListView( onTap: (){ Navigator.push(context, MaterialPageRoute(builder: (context) => My_SlidersIndicators()));} ,
+                      title: "Slider sIndicators" , subtitle: " Slider sIndicators" ),
+
+
+                  _ItemListView( onTap: (){ Navigator.push(context, MaterialPageRoute(builder: (context) => My_FooterButtons()));} ,
+                      title: "Footer Buttons" , subtitle: "  FooterButtons" ),
+
+
+                  _ItemListView( onTap: (){ Navigator.push(context, MaterialPageRoute(builder: (context) => My_DatePicker()));} ,
+                      title: "DatePicker" , subtitle: "تحديد التاريخ والوقت" ),
+
+
+                  _ItemListView( onTap: (){ Navigator.push(context, MaterialPageRoute(builder: (context) => My_Chipskeyschildren()));} ,
+                      title: "Chipskeyschildren " , subtitle: " Chipskeyschildren" ),
+
+
                    //=======_bottom Navigation Bart ===============
-                  _ItemListView( onTap: (){ Navigator.push(context, MaterialPageRoute(builder: (context) =>   My_bottomNavigationBar()));} ,
-                      title: " Bottom Navigation Bar" , subtitle: "Bottom Navigation Bar " ),
+                  _ItemListView( onTap: (){ Navigator.push(context, MaterialPageRoute(builder: (context) =>   My_bottomNavigationBar2()));} ,
+                      title: " bottom Navigation Bar" , subtitle: "My_bottomNavigationBar" ),
 
 
                   //=======Button And Text ===============
@@ -220,6 +236,17 @@
                    //=======ListView Builder ===============
                   _ItemListView( onTap: (){ Navigator.push(context, MaterialPageRoute(builder: (context) => My_Stepper()));} ,
                       title: " Stepp " , subtitle: "My_Stepper " ),
+
+
+                   //=======ListView Builder ===============
+                  _ItemListView( onTap: (){ Navigator.push(context, MaterialPageRoute(builder: (context) => My_url_launcher()));} ,
+                      title: "  url_launcher " , subtitle: " الاتصال - ارسال رسالة - فتح رابط الموقع - فتح الايميل" ),
+
+
+                   //=======ListView Builder ===============
+                  _ItemListView( onTap: (){ Navigator.push(context, MaterialPageRoute(builder: (context) => My_PopupMenuButton()));} ,
+                      title: "PopupMenuButton" , subtitle: "PopupMenuButton" ),
+
 
                 ],
               ),

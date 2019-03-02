@@ -1,15 +1,10 @@
   import 'package:flutter/material.dart';
   import 'package:anwerapp/HomeMesterApp.dart';
   import './Basics/My_SplashScreen.dart';
-  import './Basics/udemy/FontSize.dart';
-  import './Basics/udemy/My_DatePicker.dart';
-  import './Basics/udemy/My_bottomNavigationBar2.dart';
-  import './Basics/udemy/My_Chipskeyschildren.dart';
-  import './Basics/udemy/My_SlidersIndicators.dart';
-  import './Basics/udemy/My_PopupMenuButton.dart';
-  import './Application/AppWhatsApp/homeWhatsApp.dart';
-  import './Basics/My_url_launcher.dart';
-  import './Application/AppMusic_Player/HomeAppMusic.dart';
+  import 'package:anwerapp/Basics/My_DatePicker.dart';
+  import 'package:anwerapp/Basics/My_bottomNavigationBar2.dart';
+  import 'package:anwerapp/Basics/My_Chipskeyschildren.dart';
+  import 'package:anwerapp/Basics/My_SlidersIndicators.dart';
 
 
   void main() => runApp(new MyApp());
@@ -29,6 +24,7 @@
         debugShowCheckedModeBanner: false,
 
         home: new My_SplashScreen(),
+
         routes: roules,
       );
     }

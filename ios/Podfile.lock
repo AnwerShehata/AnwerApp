@@ -1,4 +1,6 @@
 PODS:
+  - audioplayers (0.0.1):
+    - Flutter
   - BoringSSL (10.0.6):
     - BoringSSL/Implementation (= 10.0.6)
     - BoringSSL/Interface (= 10.0.6)
@@ -188,6 +190,8 @@ PODS:
     - nanopb/encode (= 0.3.901)
   - nanopb/decode (0.3.901)
   - nanopb/encode (0.3.901)
+  - path_provider (0.0.1):
+    - Flutter
   - Protobuf (3.6.1)
   - shared_preferences (0.0.1):
     - Flutter
@@ -197,6 +201,7 @@ PODS:
     - Flutter
 
 DEPENDENCIES:
+  - audioplayers (from `.symlinks/plugins/audioplayers/ios`)
   - cloud_firestore (from `.symlinks/plugins/cloud_firestore/ios`)
   - firebase_auth (from `.symlinks/plugins/firebase_auth/ios`)
   - firebase_core (from `.symlinks/plugins/firebase_core/ios`)
@@ -207,6 +212,7 @@ DEPENDENCIES:
   - flutter_local_notifications (from `.symlinks/plugins/flutter_local_notifications/ios`)
   - fluttertoast (from `.symlinks/plugins/fluttertoast/ios`)
   - google_sign_in (from `.symlinks/plugins/google_sign_in/ios`)
+  - path_provider (from `.symlinks/plugins/path_provider/ios`)
   - shared_preferences (from `.symlinks/plugins/shared_preferences/ios`)
   - url_launcher (from `.symlinks/plugins/url_launcher/ios`)
   - video_player (from `.symlinks/plugins/video_player/ios`)
@@ -241,6 +247,8 @@ SPEC REPOS:
     - Protobuf
 
 EXTERNAL SOURCES:
+  audioplayers:
+    :path: ".symlinks/plugins/audioplayers/ios"
   cloud_firestore:
     :path: ".symlinks/plugins/cloud_firestore/ios"
   firebase_auth:
@@ -261,6 +269,8 @@ EXTERNAL SOURCES:
     :path: ".symlinks/plugins/fluttertoast/ios"
   google_sign_in:
     :path: ".symlinks/plugins/google_sign_in/ios"
+  path_provider:
+    :path: ".symlinks/plugins/path_provider/ios"
   shared_preferences:
     :path: ".symlinks/plugins/shared_preferences/ios"
   url_launcher:
@@ -269,6 +279,7 @@ EXTERNAL SOURCES:
     :path: ".symlinks/plugins/video_player/ios"
 
 SPEC CHECKSUMS:
+  audioplayers: 84f968cea3f2deab00ec4f8ff53358b3c0b3992c
   BoringSSL: e10f92a27043805c01071fe815a5cd98ae8212e7
   cloud_firestore: c575f263eb7033afb7d407e6264b21d6e622a061
   Firebase: b48f9e653da971ecce5b8c749684bc8bb2d26bd3
@@ -304,6 +315,7 @@ SPEC CHECKSUMS:
   GTMSessionFetcher: 0c4baf0a73acd0041bf9f71ea018deedab5ea84e
   leveldb-library: 08cba283675b7ed2d99629a4bc5fd052cd2bb6a5
   nanopb: 2901f78ea1b7b4015c860c2fdd1ea2fee1a18d48
+  path_provider: f96fff6166a8867510d2c25fdcc346327cc4b259
   Protobuf: 1eb9700044745f00181c136ef21b8ff3ad5a0fd5
   shared_preferences: 1feebfa37bb57264736e16865e7ffae7fc99b523
   url_launcher: 0067ddb8f10d36786672aa0722a21717dba3a298

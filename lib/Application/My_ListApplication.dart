@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+
 import '../Application/CommerceApp/pages/loginPage.dart';
+import '../Application/AppWhatsApp/homeWhatsApp.dart';
+import '../Application/playmusic/HomeMusic.dart';
 
 class My_ListApplication extends StatefulWidget {
 
@@ -35,6 +38,14 @@ class _BirdState extends State<My_ListApplication> {
             //=======Floating Action Button ===============
             _ItemListView( onTap: (){ Navigator.push(context, MaterialPageRoute(builder: (context) =>   loginPage()));} ,
                 title: "Home Commerce App " , subtitle: "تطبيق مشتريات" ),
+
+            //=======Floating Action Button ===============
+            _ItemListView( onTap: (){ Navigator.push(context, MaterialPageRoute(builder: (context) =>   homeWhatsApp()));} ,
+                title: " WhatsApp  " , subtitle: "تطبيق WhatsApp" ),
+
+            //=======Floating Action Button ===============
+            _ItemListView( onTap: (){ Navigator.push(context, MaterialPageRoute(builder: (context) =>   HomeMusic()));} ,
+                title: "playing Musice" , subtitle: "تشغيل الملفات الصوتية " ),
 
 
           ],
