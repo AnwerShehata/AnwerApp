@@ -5,6 +5,7 @@ import 'package:anwerapp/Ui/My_ListUI.dart';
 import 'package:anwerapp/Application/My_ListApplication.dart';
 import 'package:anwerapp/Firebase/My_ListFirebase.dart';
 import './GoogleMaps/My_ListGoogleMaps.dart';
+import './Animations/My_ListAnimations.dart';
 
 
 
@@ -72,7 +73,7 @@ class _BirdState extends State<HomeMesterApp> {
                 ),
 
                 _buildStackSections(context , title: _NameAnimation , description: "امثلة تطبيقة علي تحريك الانيميشن" , myIcon: Icons.settings ,
-//                  onTap: (){Navigator.push(context, MaterialPageRoute(builder: (context)=> My_ListFirebase()));}
+                  onTap: (){Navigator.push(context, MaterialPageRoute(builder: (context)=> My_ListAnimations()));}
                 ),
 
                 _buildStackSections(context , title: _NameApplication , description: "تطبيقات كاملة" , myIcon: Icons.phone_iphone ,

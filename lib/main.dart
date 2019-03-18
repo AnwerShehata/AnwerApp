@@ -1,10 +1,9 @@
-  import 'package:flutter/material.dart';
-  import 'package:anwerapp/HomeMesterApp.dart';
-  import './Basics/My_SplashScreen.dart';
-  import 'package:anwerapp/Basics/My_DatePicker.dart';
-  import 'package:anwerapp/Basics/My_bottomNavigationBar2.dart';
-  import 'package:anwerapp/Basics/My_Chipskeyschildren.dart';
-  import 'package:anwerapp/Basics/My_SlidersIndicators.dart';
+import 'package:anwerapp/Basics/My_SplashScreen.dart';
+import 'package:flutter/material.dart';
+import 'package:anwerapp/HomeMesterApp.dart';
+import './Animations/My_ListAnimations.dart';
+
+
 
 
   void main() => runApp(new MyApp());
@@ -24,6 +23,8 @@
         debugShowCheckedModeBanner: false,
 
         home: new My_SplashScreen(),
+
+
 
         routes: roules,
       );
