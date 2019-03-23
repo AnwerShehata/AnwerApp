@@ -13,6 +13,7 @@ class _BirdState extends State<My_DropDownButton> {
       theme: new ThemeData(fontFamily: "Cairo"),
       home:  new Scaffold(
 
+
         appBar: new AppBar(
           elevation: 0.0,
           centerTitle: true,
@@ -24,7 +25,6 @@ class _BirdState extends State<My_DropDownButton> {
               child: Column(
                 children: <Widget>[
 
-                  new Padding(padding: EdgeInsets.all(20.0)),
                   //=======  Dropdown Example 1 ==========
                   DropdownButtonHideUnderline(
                     child: new DropdownButton<String>( value: "Sex",
@@ -35,7 +35,9 @@ class _BirdState extends State<My_DropDownButton> {
                         DropdownMenuItem( value: 'For', child: Text("For")),
                         DropdownMenuItem( value: 'Five', child: Text("Five")),
                         DropdownMenuItem( value: 'Sex', child: Text("Sex")),
-                      ],onChanged: (v){},
+                      ],
+                      onChanged: (v){
+                      },
                     ),
                   ),
                   

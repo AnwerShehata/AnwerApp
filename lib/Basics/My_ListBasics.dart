@@ -32,6 +32,8 @@
   import './My_DatePicker.dart';
   import './My_FooterButtons.dart';
   import './My_SlidersIndicators.dart';
+  import '../curvedNavigationBar/HomeNavigationBar.dart';
+  import '../curvedNavigationBar/NavigationBarNormal.dart';
 
 
   class My_ListBasics extends StatefulWidget {
@@ -93,6 +95,19 @@
                       title: "Floating Action Button" , subtitle: " Floating Action Button" ),
 
 
+                  //=======_bottom Navigation Bart ===============
+                  _ItemListView( onTap: (){ Navigator.push(context, MaterialPageRoute(builder: (context) =>   My_bottomNavigationBar2()));} ,
+                      title: " bottom Navigation Bar" , subtitle: "My_bottomNavigationBar" ),
+
+
+                  _ItemListView( onTap: (){ Navigator.push(context, MaterialPageRoute(builder: (context) => NavigationBarNormal()));} ,
+                      title: "NavigationBar Normal" , subtitle: " عند الضغط علي اي عنصر سوف يتم فتح الصفحة الخاصة به في نفس المكان " ),
+
+
+                  _ItemListView( onTap: (){ Navigator.push(context, MaterialPageRoute(builder: (context) => HomeNavigationBar()));} ,
+                      title: "Curved Navigation Bar" , subtitle: " عند الضغط علي اي عنصر سوف يتم فتح الصفحة الخاصة به في نفس المكان " ),
+
+
                   _ItemListView( onTap: (){ Navigator.push(context, MaterialPageRoute(builder: (context) => My_SlidersIndicators()));} ,
                       title: "Slider sIndicators" , subtitle: " Slider sIndicators" ),
 
@@ -107,11 +122,6 @@
 
                   _ItemListView( onTap: (){ Navigator.push(context, MaterialPageRoute(builder: (context) => My_Chipskeyschildren()));} ,
                       title: "Chipskeyschildren " , subtitle: " Chipskeyschildren" ),
-
-
-                   //=======_bottom Navigation Bart ===============
-                  _ItemListView( onTap: (){ Navigator.push(context, MaterialPageRoute(builder: (context) =>   My_bottomNavigationBar2()));} ,
-                      title: " bottom Navigation Bar" , subtitle: "My_bottomNavigationBar" ),
 
 
                   //=======Button And Text ===============

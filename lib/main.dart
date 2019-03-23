@@ -2,6 +2,10 @@ import 'package:anwerapp/Basics/My_SplashScreen.dart';
 import 'package:flutter/material.dart';
 import 'package:anwerapp/HomeMesterApp.dart';
 import './Animations/My_ListAnimations.dart';
+import './curvedNavigationBar/HomeNavigationBar.dart';
+import './curvedNavigationBar/NavigationBarNormal.dart';
+
+
 
 
 

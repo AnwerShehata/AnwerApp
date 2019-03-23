@@ -34,6 +34,8 @@ dependencies:
   url_launcher:
   audioplayers:
   image_picker:
+  curved_navigation_bar:
+
 
 
 #==============launcher_icon=====================

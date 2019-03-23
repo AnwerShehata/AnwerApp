@@ -66,12 +66,12 @@ class _BirdState extends State<My_PopupMenuButton> {
     return new MaterialApp(
       debugShowCheckedModeBanner: false,
       home:  new Scaffold(
-        
+
+        //=======AppBar===============================
         appBar: AppBar(
           title: Text("Popup Menu Button"),
           elevation: 0,
           actions: <Widget>[
-
             //هنا القائمة التي تظهر في جانب AppBar ======
             PopupMenuButton<String>(
               onSelected: choiceAction,
@@ -84,11 +84,11 @@ class _BirdState extends State<My_PopupMenuButton> {
                 }).toList();
               },
             ),
-
           ],
         ),
 
 
+        //=======body===============================
         body: new Container(
           padding: new EdgeInsets.all(30),
           child: new Center(
@@ -103,7 +103,6 @@ class _BirdState extends State<My_PopupMenuButton> {
                     return _items;
                     }
                 )
-                
               ],
             ),
           ),
