@@ -2,6 +2,10 @@ import 'package:flutter/material.dart';
 import './StudentApp/ui/My_ListViewStudent.dart';
 import './CloudFirebase/PageLogin.dart';
 import './Authentication/Ui/My_loginpage.dart';
+import 'package:anwerapp/Ui/project2page/Deserve.dart';
+import './search/SearchFirebase.dart';
+
+
 
 class My_ListFirebase extends StatefulWidget {
 
@@ -35,8 +39,17 @@ class _BirdState extends State<My_ListFirebase> {
         body: ListView(
           children: <Widget>[
 
+            //=======Floating Action Button ===============
+            _ItemListView( onTap: (){ Navigator.push(context, MaterialPageRoute(builder: (context) =>   Deserve()));} ,
+                title: " Deserve" , subtitle: " Deserve" ),
+
 
             //=======Floating Action Button ===============
+            _ItemListView( onTap: (){ Navigator.push(context, MaterialPageRoute(builder: (context) =>SearchFirebase()));} ,
+                title: " SearchFirebase" , subtitle: " البحث في Firebase" ),
+
+
+    //=======Floating Action Button ===============
             _ItemListView( onTap: (){ Navigator.push(context, MaterialPageRoute(builder: (context) =>   My_ListViewStudent()));} ,
                 title: " App Student" , subtitle: "  Realtime اضافة وخذف وتعديل البيانات" ),
 

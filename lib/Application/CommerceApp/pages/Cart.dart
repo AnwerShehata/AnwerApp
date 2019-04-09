@@ -32,15 +32,17 @@ class _BirdState extends State<Cart> {
           height: 70,
           child: Row(
             children: <Widget>[
+
               Expanded(
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: <Widget>[
                     Text("Total : ",style: TextStyle(fontSize: 17 ,color: Colors.grey),),
                     Text("\$539",style: TextStyle(fontSize: 20,fontWeight: FontWeight.w500),),
-        ],
+                  ],
                 ),
               ),
+
               Expanded(child: MaterialButton(onPressed: (){},
               child: new Text("Check Out",style: TextStyle(color: Colors.white,fontSize: 25),),
                 color: Colors.pinkAccent,

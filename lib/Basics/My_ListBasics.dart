@@ -34,6 +34,8 @@
   import './My_SlidersIndicators.dart';
   import '../curvedNavigationBar/HomeNavigationBar.dart';
   import '../curvedNavigationBar/NavigationBarNormal.dart';
+  import '../Basics/PDF/SimplePDF.dart';
+
 
 
   class My_ListBasics extends StatefulWidget {
@@ -90,6 +92,10 @@
 
 
                 //=======Floating Action Button ===============
+
+                  _ItemListView( onTap: (){ Navigator.push(context, MaterialPageRoute(builder: (context) => SimplePDF()));} ,
+                      title: "SimplePDF" , subtitle: " فتح ملفات PDF من خلال Url" ),
+
 
                   _ItemListView( onTap: (){ Navigator.push(context, MaterialPageRoute(builder: (context) => My_FloatingActionButton()));} ,
                       title: "Floating Action Button" , subtitle: " Floating Action Button" ),

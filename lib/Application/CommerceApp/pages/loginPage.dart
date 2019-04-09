@@ -8,9 +8,6 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 import '../componets/StyleApp.dart';
 import 'package:anwerapp/Tools/app_tools.dart';
-
-
-
 import '../HomeCommerceApp.dart';
 
 class loginPage extends StatefulWidget {

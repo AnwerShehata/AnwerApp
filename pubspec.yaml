@@ -10,6 +10,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+
   cupertino_icons:
   carousel_pro:
   firebase_storage:
@@ -35,6 +36,12 @@ dependencies:
   audioplayers:
   image_picker:
   curved_navigation_bar:
+  avatar_glow:
+  flutter_search_bar:
+  flutter_full_pdf_viewer:
+
+
+
 
 
 

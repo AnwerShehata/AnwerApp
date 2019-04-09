@@ -1,16 +1,12 @@
 import 'package:anwerapp/Basics/My_SplashScreen.dart';
 import 'package:flutter/material.dart';
 import 'package:anwerapp/HomeMesterApp.dart';
-import './Animations/My_ListAnimations.dart';
-import './curvedNavigationBar/HomeNavigationBar.dart';
-import './curvedNavigationBar/NavigationBarNormal.dart';
-
-
-
-
+import './Application/CommerceApp/HomeCommerceApp.dart';
+import 'package:anwerapp/Plugin/avatar_glow.dart';
 
 
   void main() => runApp(new MyApp());
+
   class MyApp extends StatefulWidget {
     _BirdState createState() => new _BirdState();
   }
@@ -27,7 +23,8 @@ import './curvedNavigationBar/NavigationBarNormal.dart';
         debugShowCheckedModeBanner: false,
 
         home: new My_SplashScreen(),
-
+//        home: new SearchOne(),
+//        home: new DisplayCourse(),
 
 
         routes: roules,

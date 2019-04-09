@@ -6,6 +6,7 @@ import 'package:anwerapp/Application/My_ListApplication.dart';
 import 'package:anwerapp/Firebase/My_ListFirebase.dart';
 import './GoogleMaps/My_ListGoogleMaps.dart';
 import './Animations/My_ListAnimations.dart';
+import './Plugin/ListPlugin.dart';
 
 
 
@@ -22,6 +23,7 @@ class _BirdState extends State<HomeMesterApp> {
   String _NameAnimation = "Flutter Animation";
   String _NameFirebase = "Flutter Firebase";
   String _NameApplication = "Full application";
+  String _NamePlugin = "Flutter Plugin";
 
   @override
   Widget build(BuildContext context) {
@@ -78,6 +80,10 @@ class _BirdState extends State<HomeMesterApp> {
 
                 _buildStackSections(context , title: _NameApplication , description: "تطبيقات كاملة" , myIcon: Icons.phone_iphone ,
                   onTap: (){Navigator.push(context, MaterialPageRoute(builder: (context)=> My_ListApplication()));}
+                ),
+
+                _buildStackSections(context , title: _NamePlugin , description: "اضافات" , myIcon: Icons.phone_iphone ,
+                  onTap: (){Navigator.push(context, MaterialPageRoute(builder: (context)=> ListPlugin()));}
                 ),
 
 
