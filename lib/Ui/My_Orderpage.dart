@@ -36,6 +36,7 @@ class _BirdState extends State<My_Orderpage> {
     });
   }
 
+
   // هذا الدالة تقوم بتفرغ المبلغ المكتبو
   void emptyText(){
     setState(() {

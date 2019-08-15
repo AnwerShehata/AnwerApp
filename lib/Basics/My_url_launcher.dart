@@ -14,19 +14,20 @@ class My_url_launcher extends StatefulWidget {
 class _BirdState extends State<My_url_launcher> {
 
   void _showUrl(){
-    _launch('http://www.voidrealms.com');
+    _launch('https://www.pexels.com/search/Sheep/');
   }
 
   void _showEmail(){
-    _launch('mailto:bcairns@voidrealms.com');
+    _launch('mailto:smith@example.org?subject=News&body=New%20plugin');
   }
 
   void _showSms(){
-    _launch('sms:999-999-9999');
+    _launch('sms:5550101234');
   }
 
   void _showTelephone(){
-    _launch('tel:999-999-9999');
+//    _launch('tel:+1 555 010 999');
+    _launch("tel://21213123123");
   }
 
   void _launch(String urlString) async {
@@ -83,11 +84,13 @@ class _BirdState extends State<My_url_launcher> {
                     onPressed: (){_showSms();}
                 ),
 
+
                 SizedBox(height: 20),
                 my_FlatButtonIcon(
                   radiusButton: 10,
                   textButton: "URL Telephone",  icon: FontAwesomeIcons.phoneVolume,
                   onPressed: (){_showTelephone();} ,
+
                 ),
               ],
             ),

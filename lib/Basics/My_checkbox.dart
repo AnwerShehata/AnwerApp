@@ -83,13 +83,23 @@ class _BirdState extends State<My_checkbox> {
 
               //============== Checkbox ==========================
               new Checkbox(value: value1, onChanged: onChangedValue1),
-              new Checkbox(value: value2, onChanged: onChangedValue2 ),
+
+              new Checkbox(
+                  value: value2,
+                  onChanged: onChangedValue2 ,
+                activeColor: Colors.red,
+                checkColor: Colors.yellow,
+              ),
+
               new CheckboxListTile(
                 value: value3,
                 onChanged: onChangedValue3 ,
                 title: new Text("CheckboxListTile"),
                 subtitle: new Text("subtitle Checkbox"),
                 secondary: new Icon(Icons.weekend),
+                controlAffinity: ListTileControlAffinity.platform,
+                dense: false,
+                activeColor: Colors.green,
               ),
 
               //============== Text ============================

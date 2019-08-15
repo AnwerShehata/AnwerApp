@@ -7,6 +7,7 @@ import 'package:anwerapp/Firebase/My_ListFirebase.dart';
 import './GoogleMaps/My_ListGoogleMaps.dart';
 import './Animations/My_ListAnimations.dart';
 import './Plugin/ListPlugin.dart';
+import './BasicsAnonymous/My_ListBasicsAnonymous.dart';
 
 
 
@@ -24,6 +25,7 @@ class _BirdState extends State<HomeMesterApp> {
   String _NameFirebase = "Flutter Firebase";
   String _NameApplication = "Full application";
   String _NamePlugin = "Flutter Plugin";
+  String _NameAnonymous = "Flutter Anonymous";
 
   @override
   Widget build(BuildContext context) {
@@ -57,6 +59,11 @@ class _BirdState extends State<HomeMesterApp> {
                 _buildStackSections(context , title: _NameBasics , description: "امثلة علي الاساسيات" , myIcon: Icons.settings ,
                   onTap: (){Navigator.push(context, MaterialPageRoute(builder: (context)=> My_ListBasics()));}
                 ),
+
+                _buildStackSections(context , title: _NameAnonymous , description: "امثلة علي الاساسيات محمود ابراهيم " , myIcon: Icons.settings ,
+                  onTap: (){Navigator.push(context, MaterialPageRoute(builder: (context)=> My_ListBasicsAnonymous()));}
+                ),
+
 
                 _buildStackSections(context , title: _NameUiDesign , description: "امثلة على تصميم الصفحات" , myIcon: Icons.color_lens ,
                   onTap: (){Navigator.push(context, MaterialPageRoute(builder: (context)=> My_ListUI()));}
@@ -98,7 +105,7 @@ class _BirdState extends State<HomeMesterApp> {
     );
   }
 
-  Stack _buildStackSections(BuildContext context , {
+  Widget _buildStackSections(BuildContext context , {
     String namePage ,
     String title,
     String description,

@@ -1,8 +1,8 @@
 import 'package:anwerapp/Basics/My_SplashScreen.dart';
 import 'package:flutter/material.dart';
 import 'package:anwerapp/HomeMesterApp.dart';
-import './Application/CommerceApp/HomeCommerceApp.dart';
-import 'package:anwerapp/Plugin/avatar_glow.dart';
+import './BasicsAnonymous/textFildenew.dart';
+
 
 
   void main() => runApp(new MyApp());
@@ -23,8 +23,7 @@ import 'package:anwerapp/Plugin/avatar_glow.dart';
         debugShowCheckedModeBanner: false,
 
         home: new My_SplashScreen(),
-//        home: new SearchOne(),
-//        home: new DisplayCourse(),
+//        home: new textFildenew(),
 
 
         routes: roules,
